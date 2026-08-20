@@ -4,23 +4,38 @@ import app.morphe.patcher.patch.AppTarget
 import app.morphe.patcher.patch.Compatibility
 
 object Constants {
-    const val PACKAGE_NAME = "com.alightcreative.motion"
-    const val TARGET_VERSION_AMZ = "5.0.273.1028426"
-    const val TARGET_VERSION_PRO = "5.0.273.1028420"
-
-    val COMPATIBILITY_AMZ = Compatibility(
-        name = "After Motion Z+",
-        packageName = PACKAGE_NAME,
+    val COMPATIBILITY_AMZ_MOTIOO = Compatibility(
+        name = "After Motion Z+ (motioo)",
+        packageName = "com.alightcreative.motioo",
         targets = listOf(
-            AppTarget(TARGET_VERSION_AMZ)
+            AppTarget("5.0.272.1028371"),
+            AppTarget("5.0.273.1028426"),
+            AppTarget("5.0.273.1028420"),
+            AppTarget("5.0.273"),
+            AppTarget("5.0.272")
+        )
+    )
+
+    val COMPATIBILITY_AMZ_MOTION = Compatibility(
+        name = "After Motion Z+ (motion)",
+        packageName = "com.alightcreative.motion",
+        targets = listOf(
+            AppTarget("5.0.273.1028426"),
+            AppTarget("5.0.272.1028371"),
+            AppTarget("5.0.273"),
+            AppTarget("5.0.272")
         )
     )
 
     val COMPATIBILITY_AM_PRO = Compatibility(
         name = "Alight Motion Pro",
-        packageName = PACKAGE_NAME,
+        packageName = "com.alightcreative.motion",
         targets = listOf(
-            AppTarget(TARGET_VERSION_PRO)
+            AppTarget("5.0.273.1028420"),
+            AppTarget("5.0.273.1028426"),
+            AppTarget("5.0.272.1028371"),
+            AppTarget("5.0.273"),
+            AppTarget("5.0.272")
         )
     )
 }

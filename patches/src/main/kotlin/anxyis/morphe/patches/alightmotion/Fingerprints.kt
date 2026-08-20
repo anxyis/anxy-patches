@@ -25,11 +25,29 @@ object ZzwXyzFingerprint : Fingerprint(
     }
 )
 
-object ApplicationOnCreateFingerprint : Fingerprint(
+object AlightMotionAppFingerprint : Fingerprint(
     custom = { method, classDef ->
         classDef.type == "Lcom/alightcreative/app/motion/AlightMotionApplication;" &&
                 method.name == "onCreate" &&
                 method.parameterTypes.isEmpty() &&
                 method.implementation != null
+    }
+)
+
+object SystemExitFingerprint : Fingerprint(
+    custom = { method, classDef ->
+        classDef.type == "Lcom/google/firebase/analytics/FirebaseEncoder\$9;" &&
+                method.name == "n" &&
+                method.parameterTypes.size == 1 &&
+                method.parameterTypes[0] == "I"
+    }
+)
+
+object KillProcessFingerprint : Fingerprint(
+    custom = { method, classDef ->
+        classDef.type == "Lcom/google/firebase/analytics/connector/internal/core/d;" &&
+                method.name == "bb" &&
+                method.parameterTypes.size == 1 &&
+                method.parameterTypes[0] == "I"
     }
 )

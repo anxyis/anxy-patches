@@ -1,6 +1,6 @@
 {
-  "version": "2.4.0",
-  "download_url": "https://github.com/anxyis/anxy-patches/releases/download/v2.4.0/patches-2.4.0.mpp",
-  "created_at": "2026-08-21T03:38:00",
-  "description": "v2.4.0 - Standalone unified bytecode suite with AntiExit, M1 popup no-op, and non-blocking PopupDismisser."
+  "version": "2.5.0",
+  "download_url": "https://github.com/anxyis/anxy-patches/releases/download/v2.5.0/patches-2.5.0.mpp",
+  "created_at": "2026-08-21T03:55:00",
+  "description": "v2.5.0 - Dual-Family Universal Support (Alight Motion Pro & After Motion Z+ with motioo/motion package support)."
 }

@@ -1,8 +1,5 @@
 package anxyis.morphe.patches.alightmotion
 
-import anxyis.morphe.patches.alightmotion.daemon.AlightMotionAppFingerprint
-import anxyis.morphe.patches.alightmotion.dialogs.KillProcessFingerprint
-import anxyis.morphe.patches.alightmotion.dialogs.SystemExitFingerprint
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import com.android.tools.smali.dexlib2.Opcode
