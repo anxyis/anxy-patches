@@ -4,7 +4,6 @@ plugins {
 }
 
 group = "anxyis.morphe"
-version = "1.0.0"
 
 repositories {
     mavenLocal()
@@ -42,9 +41,10 @@ tasks {
         useJUnitPlatform()
     }
 
-    // Build .mpp patch bundle
+    // Build .mpp patch bundle matching semantic-release naming
     register<Jar>("buildPatchBundle") {
         archiveBaseName.set("patches")
+        archiveVersion.set(project.version.toString())
         archiveExtension.set("mpp")
         from(sourceSets["main"].output)
     }
