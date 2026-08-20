@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/anxyis/anxy-patches/compare/v1.5.0...v1.5.1) (2026-08-20)
+
+
+### Bug Fixes
+
+* **destruction:** 1.4.1 - use ImmutableMethod replacement to prevent UnsupportedOperationException ([f1f4094](https://github.com/anxyis/anxy-patches/commit/f1f40944fad112d6b5100d2c3781aa9248dc71f0))
+
 # [1.5.0](https://github.com/anxyis/anxy-patches/compare/v1.4.0...v1.5.0) (2026-08-20)
 
 
