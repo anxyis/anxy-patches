@@ -1,9 +1,14 @@
 package com.alightcreative.app.motion.persist;
 
+import android.app.Activity;
+import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -14,8 +19,20 @@ public class PopupDismisser {
     private static volatile boolean running = false;
 
     public static void onStart() {
+        // Seed preferences immediately via currentApplication()
+        try {
+            Class<?> atClass = Class.forName("android.app.ActivityThread");
+            Method curAppMethod = atClass.getMethod("currentApplication");
+            Application app = (Application) curAppMethod.invoke(null);
+            if (app != null) {
+                seedPreferences(app);
+            }
+        } catch (Throwable ignored) {
+        }
+
         if (running) return;
         running = true;
+
         handler.post(new Runnable() {
             @Override
             public void run() {
@@ -24,10 +41,49 @@ public class PopupDismisser {
                 } catch (Throwable ignored) {
                 }
                 if (running) {
-                    handler.postDelayed(this, 300);
+                    handler.postDelayed(this, 150);
                 }
             }
         });
+    }
+
+    public static void seedPreferences(Context context) {
+        if (context == null) return;
+        try {
+            context.getSharedPreferences("dialog", Context.MODE_PRIVATE)
+                .edit()
+                .putBoolean("first", true)
+                .putInt("view", 0)
+                .commit();
+
+            context.getSharedPreferences("aab", Context.MODE_PRIVATE)
+                .edit()
+                .putBoolean("ver_ses", true)
+                .putBoolean("ver_dev", true)
+                .commit();
+
+            context.getSharedPreferences("PkS", Context.MODE_PRIVATE)
+                .edit()
+                .putBoolean("ver_s", true)
+                .putString("f_ln", "en")
+                .putString("f_tg", "en-GB")
+                .commit();
+
+            context.getSharedPreferences("wdprefs1", Context.MODE_PRIVATE)
+                .edit()
+                .putBoolean("is_shown", true)
+                .commit();
+
+            context.getSharedPreferences("AlbinModsDialogPrefs", Context.MODE_PRIVATE)
+                .edit()
+                .putBoolean("dont_show_again", true)
+                .putBoolean("dialogLock", true)
+                .putInt("show_interval", 999999999)
+                .putLong("last_show_time", 9999999999999L)
+                .putBoolean("show_close_button", false)
+                .commit();
+        } catch (Throwable ignored) {
+        }
     }
 
     private static void dismissPopups() {
@@ -48,16 +104,37 @@ public class PopupDismisser {
                         View root = (View) viewObj;
                         if (containsMarker(root)) {
                             root.setVisibility(View.GONE);
-                            try {
-                                Method hideMethod = root.getClass().getMethod("setVisibility", int.class);
-                                hideMethod.invoke(root, View.GONE);
-                            } catch (Exception ignored) {
-                            }
+                            findAndClickDismiss(root);
                         }
                     }
                 }
             }
         } catch (Throwable ignored) {
+        }
+    }
+
+    private static void findAndClickDismiss(View view) {
+        if (view == null) return;
+        if (view instanceof TextView) {
+            CharSequence cs = ((TextView) view).getText();
+            if (cs != null) {
+                String text = cs.toString().trim();
+                if (text.equalsIgnoreCase("CLOSE") ||
+                    text.equalsIgnoreCase("CLOSE×") ||
+                    text.equalsIgnoreCase("CLOSE X") ||
+                    text.equalsIgnoreCase("Exit") ||
+                    text.equalsIgnoreCase("Cancel") ||
+                    text.equalsIgnoreCase("Dismiss")) {
+                    view.performClick();
+                    return;
+                }
+            }
+        }
+        if (view instanceof ViewGroup) {
+            ViewGroup vg = (ViewGroup) view;
+            for (int i = 0; i < vg.getChildCount(); i++) {
+                findAndClickDismiss(vg.getChildAt(i));
+            }
         }
     }
 
@@ -70,11 +147,15 @@ public class PopupDismisser {
                 String text = cs.toString();
                 if (text.contains("Satriyaid") ||
                     text.contains("Modded by") ||
+                    text.contains("Update Required") ||
+                    text.contains("UPDATE this Apps") ||
                     text.contains("VISIT LINK") ||
-                    text.contains("DONT SHOW AGAIN") ||
-                    text.contains("DON'T SHOW AGAIN") ||
+                    text.contains("AlightMotion PRO") ||
                     text.contains("Telegram") ||
-                    text.contains("JOIN MY")) {
+                    text.contains("JOIN MY") ||
+                    text.contains("Follow all my Social Media") ||
+                    text.contains("DONT SHOW AGAIN") ||
+                    text.contains("DON'T SHOW AGAIN")) {
                     return true;
                 }
             }

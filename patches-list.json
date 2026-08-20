@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated by release.yml.",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "patches": [
     {
       "name": "AMZ Popup Suppression (Complete Suite)",
@@ -10,6 +10,7 @@
         "BytecodePatch",
         "RawResourcePatch",
         "RawResourcePatch",
+        "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch"
       ],
@@ -43,11 +44,12 @@
     },
     {
       "name": "Alight Motion Pro Popup Suppression (Complete Suite)",
-      "description": "Eliminates all startup and update popups in Alight Motion Pro (BangAlbin mod).",
+      "description": "Eliminates all startup, update, and modded-by popups in Alight Motion Pro (BangAlbin mod).",
       "default": true,
       "dependencies": [
         "BytecodePatch",
-        "RawResourcePatch"
+        "RawResourcePatch",
+        "BytecodePatch"
       ],
       "compatiblePackages": [
         {

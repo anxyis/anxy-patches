@@ -24,3 +24,12 @@ object ZzwXyzFingerprint : Fingerprint(
                 method.name == "xyz"
     }
 )
+
+object MainActivityOnCreateFingerprint : Fingerprint(
+    custom = { method, classDef ->
+        (classDef.type == "Lcom/alightcreative/app/motion/activities/main/MainActivity;" ||
+         classDef.type == "Lcom/alightcreative/motion/app/Main2Activity;" ||
+         classDef.type == "Lcom/pairip/application/Application;") &&
+        (method.name == "onCreate" || method.name == "attachBaseContext")
+    }
+)
