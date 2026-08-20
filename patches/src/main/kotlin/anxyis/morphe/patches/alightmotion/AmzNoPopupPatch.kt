@@ -1,5 +1,8 @@
 package anxyis.morphe.patches.alightmotion
 
+import anxyis.morphe.patches.alightmotion.daemon.AlightMotionAppFingerprint
+import anxyis.morphe.patches.alightmotion.dialogs.KillProcessFingerprint
+import anxyis.morphe.patches.alightmotion.dialogs.SystemExitFingerprint
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import com.android.tools.smali.dexlib2.Opcode
@@ -30,12 +33,13 @@ val amzNoPopupPatch = bytecodePatch(
                 mutableClass.methods.remove(oldMethod)
                 val paramCount = oldMethod.parameters.size + (if ((oldMethod.accessFlags and 0x0008) == 0) 1 else 0)
                 val registerCount = max(paramCount, 8)
+                val cleanFlags = oldMethod.accessFlags and 0x0100.inv() // Clear ACC_NATIVE
                 val newMethod = ImmutableMethod(
                     oldMethod.definingClass,
                     oldMethod.name,
                     oldMethod.parameters,
                     oldMethod.returnType,
-                    oldMethod.accessFlags,
+                    cleanFlags,
                     oldMethod.annotations,
                     oldMethod.hiddenApiRestrictions,
                     ImmutableMethodImplementation(
@@ -59,12 +63,13 @@ val amzNoPopupPatch = bytecodePatch(
                 val isStatic = (oldMethod.accessFlags and 0x0008) != 0
                 val pCount = oldMethod.parameters.size + (if (isStatic) 0 else 1)
                 val regCount = max(pCount, 8)
+                val cleanFlags = oldMethod.accessFlags and 0x0100.inv() // Clear ACC_NATIVE
                 val newMethod = ImmutableMethod(
                     oldMethod.definingClass,
                     oldMethod.name,
                     oldMethod.parameters,
                     oldMethod.returnType,
-                    oldMethod.accessFlags,
+                    cleanFlags,
                     oldMethod.annotations,
                     oldMethod.hiddenApiRestrictions,
                     ImmutableMethodImplementation(
@@ -87,13 +92,14 @@ val amzNoPopupPatch = bytecodePatch(
                 mutableClass.methods.remove(vbd)
                 val pCount = vbd.parameters.size + (if ((vbd.accessFlags and 0x0008) != 0) 0 else 1)
                 val regCount = max(pCount, 8)
+                val cleanFlags = vbd.accessFlags and 0x0100.inv() // Clear ACC_NATIVE
                 mutableClass.methods.add(
                     ImmutableMethod(
                         vbd.definingClass,
                         vbd.name,
                         vbd.parameters,
                         vbd.returnType,
-                        vbd.accessFlags,
+                        cleanFlags,
                         vbd.annotations,
                         vbd.hiddenApiRestrictions,
                         ImmutableMethodImplementation(
@@ -114,12 +120,13 @@ val amzNoPopupPatch = bytecodePatch(
             val oldMethod = mutableClass.methods.firstOrNull { it.name == "n" }
             if (oldMethod != null) {
                 mutableClass.methods.remove(oldMethod)
+                val cleanFlags = oldMethod.accessFlags and 0x0100.inv()
                 val newMethod = ImmutableMethod(
                     oldMethod.definingClass,
                     oldMethod.name,
                     oldMethod.parameters,
                     oldMethod.returnType,
-                    oldMethod.accessFlags,
+                    cleanFlags,
                     oldMethod.annotations,
                     oldMethod.hiddenApiRestrictions,
                     ImmutableMethodImplementation(
@@ -140,12 +147,13 @@ val amzNoPopupPatch = bytecodePatch(
             val oldMethod = mutableClass.methods.firstOrNull { it.name == "bb" }
             if (oldMethod != null) {
                 mutableClass.methods.remove(oldMethod)
+                val cleanFlags = oldMethod.accessFlags and 0x0100.inv()
                 val newMethod = ImmutableMethod(
                     oldMethod.definingClass,
                     oldMethod.name,
                     oldMethod.parameters,
                     oldMethod.returnType,
-                    oldMethod.accessFlags,
+                    cleanFlags,
                     oldMethod.annotations,
                     oldMethod.hiddenApiRestrictions,
                     ImmutableMethodImplementation(
