@@ -2,7 +2,6 @@ package anxyis.morphe.patches.alightmotion.dialogs
 
 import anxyis.morphe.patches.alightmotion.Constants
 import anxyis.morphe.patches.alightmotion.ZzwXyzFingerprint
-import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import com.android.tools.smali.dexlib2.AccessFlags
@@ -19,11 +18,10 @@ val moddedByDialogPatch = bytecodePatch(
     compatibleWith(Constants.COMPATIBILITY_AMZ)
 
     execute {
-        ZzwXyzFingerprint.methodOrNull
-            ?: throw PatchException("Zzw.xyz fingerprint not found")
+        val method = ZzwXyzFingerprint.methodOrNull ?: return@execute
 
         val mutableClass = mutableClassDefBy(ZzwXyzFingerprint.classDef)
-        val oldMethod = mutableClass.methods.first { it.name == "xyz" }
+        val oldMethod = mutableClass.methods.firstOrNull { it.name == "xyz" } ?: return@execute
         mutableClass.methods.remove(oldMethod)
 
         val newMethod = ImmutableMethod(

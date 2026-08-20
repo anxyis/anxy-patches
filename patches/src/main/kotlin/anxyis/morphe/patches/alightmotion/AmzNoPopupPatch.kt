@@ -17,7 +17,7 @@ val amzNoPopupPatch = bytecodePatch(
         Compatibility(
             name = "After Motion Z+ (Satriyaid)",
             packageName = Constants.PACKAGE_NAME,
-            targets = listOf(AppTarget(Constants.TARGET_VERSION), AppTarget(Constants.TARGET_VERSION_SHORT))
+            targets = listOf(AppTarget(Constants.TARGET_VERSION_AMZ), AppTarget(Constants.TARGET_VERSION_SHORT))
         )
     )
 

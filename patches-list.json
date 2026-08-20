@@ -42,6 +42,49 @@
       "options": []
     },
     {
+      "name": "Alight Motion Pro Popup Suppression (Complete Suite)",
+      "description": "Eliminates all startup and update popups in Alight Motion Pro (BangAlbin mod).",
+      "default": true,
+      "dependencies": [
+        "BytecodePatch",
+        "RawResourcePatch"
+      ],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": null,
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.273.1028426",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.273",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
       "name": "Modded By Satriyaid Dialog Suppression",
       "description": "No-ops zzw.xyz startup dialog entry.",
       "default": true,
@@ -179,7 +222,21 @@
           "signatures": null,
           "targets": [
             {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
               "version": "5.0.273.1028426",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.273",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
@@ -229,7 +286,21 @@
           "signatures": null,
           "targets": [
             {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
               "version": "5.0.273.1028426",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.273",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,

@@ -2,7 +2,6 @@ package anxyis.morphe.patches.alightmotion.dialogs
 
 import anxyis.morphe.patches.alightmotion.Constants
 import anxyis.morphe.patches.alightmotion.ZzzbVbdFingerprint
-import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import com.android.tools.smali.dexlib2.AccessFlags
@@ -21,8 +20,7 @@ val projectWizardPatch = bytecodePatch(
     compatibleWith(Constants.COMPATIBILITY_AMZ)
 
     execute {
-        ZzzbVbdFingerprint.methodOrNull
-            ?: throw PatchException("Zzzb.vbd fingerprint not found")
+        val method = ZzzbVbdFingerprint.methodOrNull ?: return@execute
 
         val mutableClass = mutableClassDefBy(ZzzbVbdFingerprint.classDef)
 

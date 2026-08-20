@@ -15,7 +15,8 @@ val nativeServerGatePatch = rawResourcePatch(
         val targetPath = "lib/arm64-v8a/libsatriyaid.so"
         val libFile = get(targetPath)
         if (!libFile.exists()) {
-            throw PatchException("Native library $targetPath not found in APK")
+            // Gracefully skip if this variant does not have the Satriyaid native library
+            return@execute
         }
 
         val data = libFile.readBytes()
