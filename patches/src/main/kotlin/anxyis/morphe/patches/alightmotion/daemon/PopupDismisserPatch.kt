@@ -1,9 +1,10 @@
 package anxyis.morphe.patches.alightmotion.daemon
 
-import anxyis.morphe.patches.alightmotion.ApplicationOnCreateFingerprint
 import anxyis.morphe.patches.alightmotion.Constants
-import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction35c
+import com.android.tools.smali.dexlib2.immutable.reference.ImmutableMethodReference
 
 val popupDismisserPatch = bytecodePatch(
     name = "Popup Dismisser Daemon",
@@ -15,11 +16,20 @@ val popupDismisserPatch = bytecodePatch(
     extendWith("extensions/classes.dex")
 
     execute {
-        ApplicationOnCreateFingerprint.methodOrNull?.addInstructions(
-            0,
-            """
-                invoke-static {}, Lcom/alightcreative/app/motion/persist/PopupDismisser;->onStart()V
-            """.trimIndent()
-        )
+        try {
+            val appClass = mutableClassDefBy("Lcom/alightcreative/app/motion/AlightMotionApplication;")
+            val onCreateMethod = appClass.methods.firstOrNull { it.name == "onCreate" && it.parameterTypes.isEmpty() } ?: return@execute
+            val impl = onCreateMethod.implementation ?: return@execute
+
+            val hookRef = ImmutableMethodReference(
+                "Lcom/alightcreative/app/motion/persist/PopupDismisser;",
+                "onStart",
+                emptyList(),
+                "V"
+            )
+            val instruction = BuilderInstruction35c(Opcode.INVOKE_STATIC, 0, 0, 0, 0, 0, 0, hookRef)
+            impl.addInstruction(0, instruction)
+        } catch (ignored: Exception) {
+        }
     }
 }

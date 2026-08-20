@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated by release.yml.",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "patches": [
     {
       "name": "AMZ Popup Suppression (Complete Suite)",
@@ -158,70 +158,6 @@
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
-        {
-          "packageName": "com.alightcreative.motion",
-          "name": "After Motion Z+",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Popup Dismisser Daemon",
-      "description": "Injects background runtime dialog dismisser and preference seeder to eliminate all modder popups.",
-      "default": true,
-      "dependencies": [],
-      "compatiblePackages": [
-        {
-          "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        },
         {
           "packageName": "com.alightcreative.motion",
           "name": "After Motion Z+",
