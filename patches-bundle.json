@@ -1,6 +1,7 @@
 {
-  "version": "2.0.0",
-  "download_url": "https://github.com/anxyis/anxy-patches/releases/download/v2.0.0/patches-2.0.0.mpp",
-  "created_at": "2026-08-21T01:05:00",
-  "description": "v2.0.0 - Full Static Root Destruction for Alight Motion Pro & AMZ."
+  "created_at": "2026-08-20T19:40:42",
+  "description": "# [2.1.0](https://github.com/anxyis/anxy-patches/compare/v2.0.0...v2.1.0) (2026-08-20)\n\n\n### Bug Fixes\n\n* **build:** cleanly compile and package v2.0.0 with immutable method replacement ([5539342](https://github.com/anxyis/anxy-patches/commit/553934207f3e173e51c282c2991133ec69c5b34f))\n\n\n### Features\n\n* **release:** 2.0.0 - Complete Static Root Destruction of ModdedBySatriyaid & TGSatriyaidChannel ([19228b4](https://github.com/anxyis/anxy-patches/commit/19228b4905a876ab503023fe1de3f064ea924d75))",
+  "download_url": "https://github.com/anxyis/anxy-patches/releases/download/v2.1.0/patches-2.1.0.mpp",
+  "signature_download_url": "https://github.com/anxyis/anxy-patches/releases/download/v2.1.0/patches-2.1.0.mpp.asc",
+  "version": "2.1.0"
 }

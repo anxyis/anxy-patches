@@ -1,3 +1,15 @@
+# [2.1.0](https://github.com/anxyis/anxy-patches/compare/v2.0.0...v2.1.0) (2026-08-20)
+
+
+### Bug Fixes
+
+* **build:** cleanly compile and package v2.0.0 with immutable method replacement ([5539342](https://github.com/anxyis/anxy-patches/commit/553934207f3e173e51c282c2991133ec69c5b34f))
+
+
+### Features
+
+* **release:** 2.0.0 - Complete Static Root Destruction of ModdedBySatriyaid & TGSatriyaidChannel ([19228b4](https://github.com/anxyis/anxy-patches/commit/19228b4905a876ab503023fe1de3f064ea924d75))
+
 ## [1.5.1](https://github.com/anxyis/anxy-patches/compare/v1.5.0...v1.5.1) (2026-08-20)
 
 

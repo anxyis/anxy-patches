@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated by release.yml.",
-  "version": "1.5.1",
+  "version": "2.1.0",
   "patches": [
     {
       "name": "After Motion Z+ Popup Suppression (Complete Suite)",
