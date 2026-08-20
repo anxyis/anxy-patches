@@ -1,3 +1,15 @@
+# [1.5.0-dev.1](https://github.com/anxyis/anxy-patches/compare/v1.4.0...v1.5.0-dev.1) (2026-08-20)
+
+
+### Bug Fixes
+
+* **destruction:** 1.4.1 - use ImmutableMethod replacement to prevent UnsupportedOperationException ([bd91c54](https://github.com/anxyis/anxy-patches/commit/bd91c54d6278b9b5bfbe1d313dfb1fb68bbb2822))
+
+
+### Features
+
+* **destruction:** 1.4.0 - Permanent Root Destruction of ModdedBySatriyaid & TGSatriyaidChannel ([6b5e50f](https://github.com/anxyis/anxy-patches/commit/6b5e50fd459d69d3b073d3871b0ac2cf409da50a))
+
 # [1.2.0](https://github.com/anxyis/anxy-patches/compare/v1.1.0...v1.2.0) (2026-08-20)
 
 
