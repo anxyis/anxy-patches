@@ -7,8 +7,16 @@ group = "anxyis.morphe"
 
 repositories {
     mavenLocal()
-    mavenCentral()
     google()
+    mavenCentral()
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/MorpheApp/registry")
+        credentials {
+            username = providers.gradleProperty("gpr.user").orNull ?: System.getenv("GITHUB_ACTOR") ?: "anxyis"
+            password = providers.gradleProperty("gpr.key").orNull ?: System.getenv("GITHUB_TOKEN")
+        }
+    }
     maven {
         url = uri("https://jitpack.io")
         content {
@@ -19,7 +27,7 @@ repositories {
 }
 
 dependencies {
-    implementation("app.morphe:morphe-patcher:1.9.0")
+    implementation("app.morphe:morphe-patcher:1.8.0-dev.3")
     implementation("com.google.code.gson:gson:2.11.0")
     implementation("com.google.guava:guava:33.3.1-jre")
     implementation("com.github.MorpheApp.smali:smali:d856bad65f")
