@@ -44,7 +44,10 @@ dependencies {
 kotlin {
     jvmToolchain(17)
     compilerOptions {
-        freeCompilerArgs.add("-Xcontext-receivers")
+        freeCompilerArgs.addAll(
+            "-Xcontext-receivers",
+            "-opt-in=app.morphe.patcher.InternalApi"
+        )
     }
 }
 
@@ -59,6 +62,7 @@ tasks {
         dependsOn("classes")
         classpath = d8Configuration
         mainClass.set("com.android.tools.r8.D8")
+        jvmArgs = listOf("-Xmx512m")
         
         doFirst {
             val out = dexOutDir.get().asFile
@@ -101,5 +105,6 @@ tasks {
         dependsOn(build)
         classpath = sourceSets["main"].runtimeClasspath
         mainClass.set("anxyis.morphe.util.PatchListGeneratorKt")
+        jvmArgs = listOf("-Xmx512m")
     }
 }

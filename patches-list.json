@@ -3,21 +3,21 @@
   "version": "1.0.0",
   "patches": [
     {
-      "name": "AMZ Popup Suppression (Complete Suite)",
-      "description": "Comprehensively eliminates all startup, update, wizard, and modded-by popups in After Motion Z+ (Satriyaid mod of Alight Motion).",
+      "name": "After Motion Z+ Popup Suppression (Complete Suite)",
+      "description": "Eliminates all startup, update, and modded-by popups in After Motion Z+ (v5.0.273).",
       "default": true,
       "dependencies": [
         "BytecodePatch",
-        "RawResourcePatch",
-        "RawResourcePatch",
         "BytecodePatch",
         "BytecodePatch",
+        "BytecodePatch",
+        "RawResourcePatch",
         "BytecodePatch"
       ],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "After Motion Z+ (Satriyaid)",
+          "name": "After Motion Z+",
           "description": null,
           "apkFileType": null,
           "appIconColor": null,
@@ -47,6 +47,7 @@
       "description": "Eliminates all startup, update, and modded-by popups in Alight Motion Pro (BangAlbin mod).",
       "default": true,
       "dependencies": [
+        "BytecodePatch",
         "BytecodePatch",
         "RawResourcePatch",
         "BytecodePatch"

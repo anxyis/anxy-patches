@@ -1,6 +1,7 @@
 package anxyis.morphe.patches.alightmotion
 
 import anxyis.morphe.patches.alightmotion.daemon.popupDismisserPatch
+import anxyis.morphe.patches.alightmotion.dialogs.satriyaidModdedDialogDestructionPatch
 import anxyis.morphe.patches.all.dialogs.updatesRequiredPatch
 import anxyis.morphe.patches.all.prefs.seedPreferencesPatch
 import app.morphe.patcher.patch.bytecodePatch
@@ -13,6 +14,7 @@ val alightMotionProNoPopupPatch = bytecodePatch(
     compatibleWith(Constants.COMPATIBILITY_AM_PRO)
 
     dependsOn(
+        satriyaidModdedDialogDestructionPatch,
         updatesRequiredPatch,
         seedPreferencesPatch,
         popupDismisserPatch
