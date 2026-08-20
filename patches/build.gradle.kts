@@ -4,7 +4,6 @@ plugins {
 }
 
 group = "anxyis.morphe"
-version = "1.0.0"
 
 repositories {
     mavenLocal()
