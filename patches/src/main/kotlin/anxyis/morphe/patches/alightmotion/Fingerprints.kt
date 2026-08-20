@@ -51,17 +51,3 @@ object KillProcessFingerprint : Fingerprint(
                 method.parameterTypes[0] == "I"
     }
 )
-
-object SignatureCheckFingerprint : Fingerprint(
-    custom = { method, classDef ->
-        classDef.type == "Lcom/pairip/SignatureCheck;" &&
-                method.name == "verifyIntegrity"
-    }
-)
-
-object StartupLauncherFingerprint : Fingerprint(
-    custom = { method, classDef ->
-        classDef.type == "Lcom/pairip/StartupLauncher;" &&
-                method.name == "launch"
-    }
-)
