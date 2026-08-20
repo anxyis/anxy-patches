@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated by release.yml.",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "patches": [
     {
       "name": "After Motion Z+ Popup Suppression (Complete Suite)",
@@ -23,6 +23,13 @@
           "appIconColor": null,
           "signatures": null,
           "targets": [
+            {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
             {
               "version": "5.0.273.1028426",
               "versionCodes": null,
@@ -133,6 +140,13 @@
           "signatures": null,
           "targets": [
             {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
               "version": "5.0.273.1028426",
               "versionCodes": null,
               "isExperimental": false,
@@ -165,6 +179,13 @@
           "appIconColor": null,
           "signatures": null,
           "targets": [
+            {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
             {
               "version": "5.0.273.1028426",
               "versionCodes": null,
@@ -199,6 +220,13 @@
           "signatures": null,
           "targets": [
             {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
               "version": "5.0.273.1028426",
               "versionCodes": null,
               "isExperimental": false,
@@ -231,6 +259,13 @@
           "appIconColor": null,
           "signatures": null,
           "targets": [
+            {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
             {
               "version": "5.0.273.1028426",
               "versionCodes": null,
@@ -298,6 +333,13 @@
           "signatures": null,
           "targets": [
             {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
               "version": "5.0.273.1028426",
               "versionCodes": null,
               "isExperimental": false,
@@ -362,6 +404,13 @@
           "signatures": null,
           "targets": [
             {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
               "version": "5.0.273.1028426",
               "versionCodes": null,
               "isExperimental": false,
@@ -394,6 +443,13 @@
           "appIconColor": null,
           "signatures": null,
           "targets": [
+            {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
             {
               "version": "5.0.273.1028426",
               "versionCodes": null,
@@ -458,6 +514,13 @@
           "appIconColor": null,
           "signatures": null,
           "targets": [
+            {
+              "version": "5.0.273.1028420",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
             {
               "version": "5.0.273.1028426",
               "versionCodes": null,

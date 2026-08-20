@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/anxyis/anxy-patches/compare/v2.1.0...v2.1.1) (2026-08-20)
+
+
+### Bug Fixes
+
+* **destruction:** 2.0.0 - fix Dalvik instruction formats (Format11x for return/return-object) and expand target versions ([8f9e190](https://github.com/anxyis/anxy-patches/commit/8f9e190516234f7b5caedc437abb0eddad41b009))
+
 # [2.1.0](https://github.com/anxyis/anxy-patches/compare/v2.0.0...v2.1.0) (2026-08-20)
 
 
