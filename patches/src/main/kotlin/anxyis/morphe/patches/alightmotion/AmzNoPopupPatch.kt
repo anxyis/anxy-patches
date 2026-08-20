@@ -13,7 +13,7 @@ import kotlin.math.max
 
 val amzNoPopupPatch = bytecodePatch(
     name = "After Motion Z+ Popup Suppression (Complete Suite)",
-    description = "Eliminates all startup, update, and modded-by popups in After Motion Z+ (v5.0.272 / v5.0.273).",
+    description = "Eliminates all startup, update, signature verification, and modded-by popups in After Motion Z+ (v5.0.272 / v5.0.273).",
     default = true
 ) {
     compatibleWith(Constants.COMPATIBILITY_AMZ_MOTIOO, Constants.COMPATIBILITY_AMZ_MOTION)
@@ -21,46 +21,16 @@ val amzNoPopupPatch = bytecodePatch(
     extendWith("extensions/classes.dex")
 
     execute {
-        // 1. M1: Updates Required Popup (fq.ab -> return-void)
-        val fqMethod = FqAbFingerprint.methodOrNull
-        if (fqMethod != null) {
-            val mutableClass = mutableClassDefBy(FqAbFingerprint.classDef)
-            val oldMethod = mutableClass.methods.firstOrNull { it.name == "ab" }
+        // 1. PairIP SignatureCheck (verifyIntegrity -> return-void)
+        val sigMethod = SignatureCheckFingerprint.methodOrNull
+        if (sigMethod != null) {
+            val mutableClass = mutableClassDefBy(SignatureCheckFingerprint.classDef)
+            val oldMethod = mutableClass.methods.firstOrNull { it.name == "verifyIntegrity" }
             if (oldMethod != null) {
                 mutableClass.methods.remove(oldMethod)
                 val paramCount = oldMethod.parameters.size + (if ((oldMethod.accessFlags and 0x0008) == 0) 1 else 0)
-                val registerCount = max(paramCount, 8)
-                val cleanFlags = oldMethod.accessFlags and 0x0100.inv() // Clear ACC_NATIVE
-                val newMethod = ImmutableMethod(
-                    oldMethod.definingClass,
-                    oldMethod.name,
-                    oldMethod.parameters,
-                    oldMethod.returnType,
-                    cleanFlags,
-                    oldMethod.annotations,
-                    oldMethod.hiddenApiRestrictions,
-                    ImmutableMethodImplementation(
-                        registerCount,
-                        listOf(ImmutableInstruction10x(Opcode.RETURN_VOID)),
-                        null,
-                        null
-                    )
-                ).toMutable()
-                mutableClass.methods.add(newMethod)
-            }
-        }
-
-        // 2. M8: Modded by Satriyaid Dialog (zzw.xyz -> return-void)
-        val zzwMethod = ZzwXyzFingerprint.methodOrNull
-        if (zzwMethod != null) {
-            val mutableClass = mutableClassDefBy(ZzwXyzFingerprint.classDef)
-            val oldMethod = mutableClass.methods.firstOrNull { it.name == "xyz" }
-            if (oldMethod != null) {
-                mutableClass.methods.remove(oldMethod)
-                val isStatic = (oldMethod.accessFlags and 0x0008) != 0
-                val pCount = oldMethod.parameters.size + (if (isStatic) 0 else 1)
-                val regCount = max(pCount, 8)
-                val cleanFlags = oldMethod.accessFlags and 0x0100.inv() // Clear ACC_NATIVE
+                val regCount = max(paramCount, 8)
+                val cleanFlags = oldMethod.accessFlags and 0x0100.inv()
                 val newMethod = ImmutableMethod(
                     oldMethod.definingClass,
                     oldMethod.name,
@@ -80,7 +50,95 @@ val amzNoPopupPatch = bytecodePatch(
             }
         }
 
-        // 3. M7: Project Wizard (zzzb.vbd -> return-void)
+        // 2. PairIP StartupLauncher (launch -> return-void)
+        val slMethod = StartupLauncherFingerprint.methodOrNull
+        if (slMethod != null) {
+            val mutableClass = mutableClassDefBy(StartupLauncherFingerprint.classDef)
+            val oldMethod = mutableClass.methods.firstOrNull { it.name == "launch" }
+            if (oldMethod != null) {
+                mutableClass.methods.remove(oldMethod)
+                val paramCount = oldMethod.parameters.size + (if ((oldMethod.accessFlags and 0x0008) == 0) 1 else 0)
+                val regCount = max(paramCount, 8)
+                val cleanFlags = oldMethod.accessFlags and 0x0100.inv()
+                val newMethod = ImmutableMethod(
+                    oldMethod.definingClass,
+                    oldMethod.name,
+                    oldMethod.parameters,
+                    oldMethod.returnType,
+                    cleanFlags,
+                    oldMethod.annotations,
+                    oldMethod.hiddenApiRestrictions,
+                    ImmutableMethodImplementation(
+                        regCount,
+                        listOf(ImmutableInstruction10x(Opcode.RETURN_VOID)),
+                        null,
+                        null
+                    )
+                ).toMutable()
+                mutableClass.methods.add(newMethod)
+            }
+        }
+
+        // 3. M1: Updates Required Popup (fq.ab -> return-void)
+        val fqMethod = FqAbFingerprint.methodOrNull
+        if (fqMethod != null) {
+            val mutableClass = mutableClassDefBy(FqAbFingerprint.classDef)
+            val oldMethod = mutableClass.methods.firstOrNull { it.name == "ab" }
+            if (oldMethod != null) {
+                mutableClass.methods.remove(oldMethod)
+                val paramCount = oldMethod.parameters.size + (if ((oldMethod.accessFlags and 0x0008) == 0) 1 else 0)
+                val registerCount = max(paramCount, 8)
+                val cleanFlags = oldMethod.accessFlags and 0x0100.inv()
+                val newMethod = ImmutableMethod(
+                    oldMethod.definingClass,
+                    oldMethod.name,
+                    oldMethod.parameters,
+                    oldMethod.returnType,
+                    cleanFlags,
+                    oldMethod.annotations,
+                    oldMethod.hiddenApiRestrictions,
+                    ImmutableMethodImplementation(
+                        registerCount,
+                        listOf(ImmutableInstruction10x(Opcode.RETURN_VOID)),
+                        null,
+                        null
+                    )
+                ).toMutable()
+                mutableClass.methods.add(newMethod)
+            }
+        }
+
+        // 4. M8: Modded by Satriyaid Dialog (zzw.xyz -> return-void)
+        val zzwMethod = ZzwXyzFingerprint.methodOrNull
+        if (zzwMethod != null) {
+            val mutableClass = mutableClassDefBy(ZzwXyzFingerprint.classDef)
+            val oldMethod = mutableClass.methods.firstOrNull { it.name == "xyz" }
+            if (oldMethod != null) {
+                mutableClass.methods.remove(oldMethod)
+                val isStatic = (oldMethod.accessFlags and 0x0008) != 0
+                val pCount = oldMethod.parameters.size + (if (isStatic) 0 else 1)
+                val regCount = max(pCount, 8)
+                val cleanFlags = oldMethod.accessFlags and 0x0100.inv()
+                val newMethod = ImmutableMethod(
+                    oldMethod.definingClass,
+                    oldMethod.name,
+                    oldMethod.parameters,
+                    oldMethod.returnType,
+                    cleanFlags,
+                    oldMethod.annotations,
+                    oldMethod.hiddenApiRestrictions,
+                    ImmutableMethodImplementation(
+                        regCount,
+                        listOf(ImmutableInstruction10x(Opcode.RETURN_VOID)),
+                        null,
+                        null
+                    )
+                ).toMutable()
+                mutableClass.methods.add(newMethod)
+            }
+        }
+
+        // 5. M7: Project Wizard (zzzb.vbd -> return-void)
         val zzzbMethod = ZzzbVbdFingerprint.methodOrNull
         if (zzzbMethod != null) {
             val mutableClass = mutableClassDefBy(ZzzbVbdFingerprint.classDef)
@@ -89,7 +147,7 @@ val amzNoPopupPatch = bytecodePatch(
                 mutableClass.methods.remove(vbd)
                 val pCount = vbd.parameters.size + (if ((vbd.accessFlags and 0x0008) != 0) 0 else 1)
                 val regCount = max(pCount, 8)
-                val cleanFlags = vbd.accessFlags and 0x0100.inv() // Clear ACC_NATIVE
+                val cleanFlags = vbd.accessFlags and 0x0100.inv()
                 mutableClass.methods.add(
                     ImmutableMethod(
                         vbd.definingClass,
@@ -110,7 +168,7 @@ val amzNoPopupPatch = bytecodePatch(
             }
         }
 
-        // 4. Anti-Exit: System.exit -> return-void
+        // 6. Anti-Exit: System.exit -> return-void
         val exitMethod = SystemExitFingerprint.methodOrNull
         if (exitMethod != null) {
             val mutableClass = mutableClassDefBy(SystemExitFingerprint.classDef)
@@ -137,7 +195,7 @@ val amzNoPopupPatch = bytecodePatch(
             }
         }
 
-        // 5. Anti-Exit: Process.killProcess -> return-void
+        // 7. Anti-Exit: Process.killProcess -> return-void
         val killMethod = KillProcessFingerprint.methodOrNull
         if (killMethod != null) {
             val mutableClass = mutableClassDefBy(KillProcessFingerprint.classDef)
@@ -164,7 +222,7 @@ val amzNoPopupPatch = bytecodePatch(
             }
         }
 
-        // 6. M4: Injects PopupDismisser into AlightMotionApplication.onCreate
+        // 8. M4: Injects PopupDismisser into AlightMotionApplication.onCreate
         val appMethod = AlightMotionAppFingerprint.methodOrNull
         if (appMethod != null) {
             val mutableClass = mutableClassDefBy(AlightMotionAppFingerprint.classDef)
