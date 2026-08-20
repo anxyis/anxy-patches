@@ -1,6 +1,7 @@
 {
-  "created_at": "2026-08-20T14:57:41",
-  "description": "# [1.0.0](https://github.com/anxyis/anxy-patches/releases/tag/v1.0.0)\n\n### Features\n\n* **Alight Motion / After Motion:** AMZ Popup Suppression (Complete Suite)",
-  "download_url": "https://github.com/anxyis/anxy-patches/releases/download/v1.0.0/patches-1.0.0.mpp",
-  "version": "1.0.0"
+  "created_at": "2026-08-20T15:20:02",
+  "description": "## [1.0.1-dev.1](https://github.com/anxyis/anxy-patches/compare/v1.0.0...v1.0.1-dev.1) (2026-08-20)\n\n\n### Bug Fixes\n\n* **build:** embed classes.dex and Morphe manifest attributes into MPP bundle ([17c8e66](https://github.com/anxyis/anxy-patches/commit/17c8e6621853ba5f93056b5afec688f2464beb63))",
+  "download_url": "https://github.com/anxyis/anxy-patches/releases/download/v1.0.1-dev.1/patches-1.0.1-dev.1.mpp",
+  "signature_download_url": "https://github.com/anxyis/anxy-patches/releases/download/v1.0.1-dev.1/patches-1.0.1-dev.1.mpp.asc",
+  "version": "1.0.1-dev.1"
 }

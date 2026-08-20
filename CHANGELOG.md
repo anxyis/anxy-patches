@@ -1,3 +1,10 @@
+## [1.0.1-dev.1](https://github.com/anxyis/anxy-patches/compare/v1.0.0...v1.0.1-dev.1) (2026-08-20)
+
+
+### Bug Fixes
+
+* **build:** embed classes.dex and Morphe manifest attributes into MPP bundle ([17c8e66](https://github.com/anxyis/anxy-patches/commit/17c8e6621853ba5f93056b5afec688f2464beb63))
+
 # 1.0.0 (2026-08-20)
 
 
