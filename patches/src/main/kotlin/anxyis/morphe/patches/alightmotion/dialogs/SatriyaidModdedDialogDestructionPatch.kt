@@ -2,9 +2,12 @@ package anxyis.morphe.patches.alightmotion.dialogs
 
 import anxyis.morphe.patches.alightmotion.Constants
 import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import com.android.tools.smali.dexlib2.Opcode
-import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction10x
-import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction11n
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethodImplementation
+import com.android.tools.smali.dexlib2.immutable.instruction.ImmutableInstruction10x
+import com.android.tools.smali.dexlib2.immutable.instruction.ImmutableInstruction11n
 
 val satriyaidModdedDialogDestructionPatch = bytecodePatch(
     name = "Modded By Satriyaid Dialog Destruction",
@@ -20,30 +23,51 @@ val satriyaidModdedDialogDestructionPatch = bytecodePatch(
             // 1. Destroy all ModdedBySatriyaid reflection methods
             if (type.startsWith("Lcom/alightcreative/app/motion/activities/main/ModdedBySatriyaid/")) {
                 val mutableClass = mutableClassDefBy(classDef)
-                for (mutableMethod in mutableClass.methods) {
-                    val impl = mutableMethod.implementation ?: continue
-                    impl.instructions.clear()
-                    when (mutableMethod.returnType) {
-                        "V" -> impl.addInstruction(BuilderInstruction10x(Opcode.RETURN_VOID))
-                        "Z", "I", "B", "S", "C" -> {
-                            impl.addInstruction(BuilderInstruction11n(Opcode.CONST_4, 0, 0))
-                            impl.addInstruction(BuilderInstruction10x(Opcode.RETURN))
-                        }
-                        else -> {
-                            impl.addInstruction(BuilderInstruction11n(Opcode.CONST_4, 0, 0))
-                            impl.addInstruction(BuilderInstruction10x(Opcode.RETURN_OBJECT))
-                        }
+                val methodList = mutableClass.methods.toList()
+                for (m in methodList) {
+                    mutableClass.methods.remove(m)
+                    val instructions = when (m.returnType) {
+                        "V" -> listOf(ImmutableInstruction10x(Opcode.RETURN_VOID))
+                        "Z", "I", "B", "S", "C" -> listOf(
+                            ImmutableInstruction11n(Opcode.CONST_4, 0, 0),
+                            ImmutableInstruction10x(Opcode.RETURN)
+                        )
+                        else -> listOf(
+                            ImmutableInstruction11n(Opcode.CONST_4, 0, 0),
+                            ImmutableInstruction10x(Opcode.RETURN_OBJECT)
+                        )
                     }
+                    val newMethod = ImmutableMethod(
+                        m.definingClass,
+                        m.name,
+                        m.parameters,
+                        m.returnType,
+                        m.accessFlags and 0x0100.inv(),
+                        m.annotations,
+                        m.hiddenApiRestrictions,
+                        ImmutableMethodImplementation(1, instructions, null, null)
+                    ).toMutable()
+                    mutableClass.methods.add(newMethod)
                 }
             }
 
             // 2. Destroy TGSatriyaidChannel native loader
             if (type == "Lx0/TGSatriyaidChannel;") {
                 val mutableClass = mutableClassDefBy(classDef)
-                for (mutableMethod in mutableClass.methods) {
-                    val impl = mutableMethod.implementation ?: continue
-                    impl.instructions.clear()
-                    impl.addInstruction(BuilderInstruction10x(Opcode.RETURN_VOID))
+                val methodList = mutableClass.methods.toList()
+                for (m in methodList) {
+                    mutableClass.methods.remove(m)
+                    val newMethod = ImmutableMethod(
+                        m.definingClass,
+                        m.name,
+                        m.parameters,
+                        m.returnType,
+                        m.accessFlags and 0x0100.inv(),
+                        m.annotations,
+                        m.hiddenApiRestrictions,
+                        ImmutableMethodImplementation(0, listOf(ImmutableInstruction10x(Opcode.RETURN_VOID)), null, null)
+                    ).toMutable()
+                    mutableClass.methods.add(newMethod)
                 }
             }
         }

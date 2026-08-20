@@ -54,6 +54,7 @@ kotlin {
 tasks {
     test {
         useJUnitPlatform()
+        jvmArgs = listOf("-Xmx256m")
     }
 
     val dexOutDir = layout.buildDirectory.dir("dex")
@@ -108,3 +109,4 @@ tasks {
         jvmArgs = listOf("-Xmx512m")
     }
 }
+
