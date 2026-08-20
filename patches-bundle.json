@@ -1,7 +1,6 @@
 {
-  "created_at": "2026-08-20T17:32:21",
-  "description": "## [1.5.1](https://github.com/anxyis/anxy-patches/compare/v1.5.0...v1.5.1) (2026-08-20)\n\n\n### Bug Fixes\n\n* **destruction:** 1.4.1 - use ImmutableMethod replacement to prevent UnsupportedOperationException ([f1f4094](https://github.com/anxyis/anxy-patches/commit/f1f40944fad112d6b5100d2c3781aa9248dc71f0))",
-  "download_url": "https://github.com/anxyis/anxy-patches/releases/download/v1.5.1/patches-1.5.1.mpp",
-  "signature_download_url": "https://github.com/anxyis/anxy-patches/releases/download/v1.5.1/patches-1.5.1.mpp.asc",
-  "version": "1.5.1"
+  "version": "1.6.0",
+  "download_url": "https://github.com/anxyis/anxy-patches/releases/download/v1.6.0/patches-1.6.0.mpp",
+  "created_at": "2026-08-21T00:30:00",
+  "description": "v1.6.0 - Robust Root Destruction for Alight Motion Pro and AMZ."
 }
