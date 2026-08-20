@@ -2,9 +2,9 @@ package anxyis.morphe.patches.alightmotion
 
 import anxyis.morphe.patches.alightmotion.daemon.popupDismisserPatch
 import anxyis.morphe.patches.alightmotion.dialogs.moddedByDialogPatch
+import anxyis.morphe.patches.alightmotion.dialogs.nativeServerGatePatch
 import anxyis.morphe.patches.alightmotion.dialogs.projectWizardPatch
 import anxyis.morphe.patches.all.dialogs.updatesRequiredPatch
-import anxyis.morphe.patches.all.prefs.seedPreferencesPatch
 import app.morphe.patcher.patch.bytecodePatch
 
 val amzNoPopupPatch = bytecodePatch(
@@ -15,10 +15,10 @@ val amzNoPopupPatch = bytecodePatch(
     compatibleWith(Constants.COMPATIBILITY_AMZ)
 
     dependsOn(
+        updatesRequiredPatch,
         moddedByDialogPatch,
         projectWizardPatch,
-        updatesRequiredPatch,
-        seedPreferencesPatch,
+        nativeServerGatePatch,
         popupDismisserPatch
     )
 }
