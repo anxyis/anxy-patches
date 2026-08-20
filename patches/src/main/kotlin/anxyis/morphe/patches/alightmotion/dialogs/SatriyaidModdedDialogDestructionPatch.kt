@@ -8,6 +8,7 @@ import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodImplementation
 import com.android.tools.smali.dexlib2.immutable.instruction.ImmutableInstruction10x
 import com.android.tools.smali.dexlib2.immutable.instruction.ImmutableInstruction11n
+import com.android.tools.smali.dexlib2.immutable.instruction.ImmutableInstruction11x
 
 val satriyaidModdedDialogDestructionPatch = bytecodePatch(
     name = "Modded By Satriyaid Dialog Destruction",
@@ -30,11 +31,11 @@ val satriyaidModdedDialogDestructionPatch = bytecodePatch(
                         "V" -> listOf(ImmutableInstruction10x(Opcode.RETURN_VOID))
                         "Z", "I", "B", "S", "C" -> listOf(
                             ImmutableInstruction11n(Opcode.CONST_4, 0, 0),
-                            ImmutableInstruction10x(Opcode.RETURN)
+                            ImmutableInstruction11x(Opcode.RETURN, 0)
                         )
                         else -> listOf(
                             ImmutableInstruction11n(Opcode.CONST_4, 0, 0),
-                            ImmutableInstruction10x(Opcode.RETURN_OBJECT)
+                            ImmutableInstruction11x(Opcode.RETURN_OBJECT, 0)
                         )
                     }
                     val newMethod = ImmutableMethod(

@@ -13,6 +13,7 @@ object Constants {
         name = "After Motion Z+",
         packageName = PACKAGE_NAME,
         targets = listOf(
+            AppTarget(TARGET_VERSION_PRO),
             AppTarget(TARGET_VERSION_AMZ),
             AppTarget(TARGET_VERSION_SHORT)
         )
