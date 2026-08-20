@@ -4,7 +4,6 @@ import anxyis.morphe.patches.alightmotion.Constants
 import anxyis.morphe.patches.alightmotion.ZzwXyzFingerprint
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
-import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodImplementation
@@ -13,27 +12,30 @@ import com.android.tools.smali.dexlib2.immutable.instruction.ImmutableInstructio
 val moddedByDialogPatch = bytecodePatch(
     name = "Modded By Satriyaid Dialog Suppression",
     description = "No-ops zzw.xyz startup dialog entry.",
-    default = true
+    default = false
 ) {
     compatibleWith(Constants.COMPATIBILITY_AMZ)
 
     execute {
         val method = ZzwXyzFingerprint.methodOrNull ?: return@execute
-
         val mutableClass = mutableClassDefBy(ZzwXyzFingerprint.classDef)
         val oldMethod = mutableClass.methods.firstOrNull { it.name == "xyz" } ?: return@execute
         mutableClass.methods.remove(oldMethod)
+
+        val isStatic = (oldMethod.accessFlags and 0x0008) != 0
+        val pCount = oldMethod.parameters.size + (if (isStatic) 0 else 1)
+        val regCount = if (pCount > 8) pCount else 8
 
         val newMethod = ImmutableMethod(
             oldMethod.definingClass,
             oldMethod.name,
             oldMethod.parameters,
             oldMethod.returnType,
-            oldMethod.accessFlags and AccessFlags.NATIVE.value.inv(),
+            oldMethod.accessFlags,
             oldMethod.annotations,
             oldMethod.hiddenApiRestrictions,
             ImmutableMethodImplementation(
-                1,
+                regCount,
                 listOf(ImmutableInstruction10x(Opcode.RETURN_VOID)),
                 null,
                 null

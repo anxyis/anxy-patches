@@ -7,7 +7,7 @@ import app.morphe.patcher.patch.rawResourcePatch
 val nativeServerGatePatch = rawResourcePatch(
     name = "Native Server 1 Startup Gate Bypass",
     description = "NOPs native gate cbz branch in libsatriyaid.so at 0x585c0.",
-    default = true
+    default = false
 ) {
     compatibleWith(Constants.COMPATIBILITY_AMZ)
 
@@ -15,7 +15,6 @@ val nativeServerGatePatch = rawResourcePatch(
         val targetPath = "lib/arm64-v8a/libsatriyaid.so"
         val libFile = get(targetPath)
         if (!libFile.exists()) {
-            // Gracefully skip if this variant does not have the Satriyaid native library
             return@execute
         }
 
