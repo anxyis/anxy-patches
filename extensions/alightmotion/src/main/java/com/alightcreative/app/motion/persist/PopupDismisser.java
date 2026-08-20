@@ -18,8 +18,17 @@ public class PopupDismisser {
     private static final Handler handler = new Handler(Looper.getMainLooper());
     private static volatile boolean running = false;
 
+    public static void onStart(Context context) {
+        if (context != null) {
+            try {
+                seedPreferences(context);
+            } catch (Throwable ignored) {
+            }
+        }
+        onStart();
+    }
+
     public static void onStart() {
-        // Seed preferences immediately via currentApplication()
         try {
             Class<?> atClass = Class.forName("android.app.ActivityThread");
             Method curAppMethod = atClass.getMethod("currentApplication");
@@ -122,9 +131,11 @@ public class PopupDismisser {
                 if (text.equalsIgnoreCase("CLOSE") ||
                     text.equalsIgnoreCase("CLOSE×") ||
                     text.equalsIgnoreCase("CLOSE X") ||
-                    text.equalsIgnoreCase("Exit") ||
                     text.equalsIgnoreCase("Cancel") ||
-                    text.equalsIgnoreCase("Dismiss")) {
+                    text.equalsIgnoreCase("Dismiss") ||
+                    text.equalsIgnoreCase("OK") ||
+                    text.equalsIgnoreCase("LATER") ||
+                    text.equalsIgnoreCase("REMIND ME LATER")) {
                     view.performClick();
                     return;
                 }
