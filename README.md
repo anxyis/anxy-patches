@@ -15,8 +15,6 @@
 |---|---|---|
 | **After Motion Z+** 🎯 💻 | `com.alightcreative.motion` | <ul><li>AMZ Popup Suppression (Complete Suite)</li><li>Native Server 1 Startup Gate Bypass</li><li>New Project Wizard Suppression</li><li>Modded By Satriyaid Dialog Suppression</li><li>Updates Required Popup Suppression</li><li>Seed Default Preferences</li></ul> |
 | **Alight Motion Pro** 🎯 | `com.alightcreative.motion` | <ul><li>Updates Required Popup Suppression</li><li>Seed Default Preferences</li></ul> |
-| | | |
-| _Universal Patches_ | _All Apps_ | <ul><li>Seed Default Preferences</li><li>Updates Required Popup Suppression</li></ul> |
 
 <br/>
 
