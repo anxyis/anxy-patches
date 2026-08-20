@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-20T15:31:40",
-  "description": "# [1.1.0](https://github.com/anxyis/anxy-patches/compare/v1.0.1...v1.1.0) (2026-08-20)\n\n\n### Features\n\n* **alightmotion:** add dedicated AM Pro 5.0.273.1028420 suite and graceful native guards ([ccd7637](https://github.com/anxyis/anxy-patches/commit/ccd7637941c8187879246e2f30265548636704a8))",
-  "download_url": "https://github.com/anxyis/anxy-patches/releases/download/v1.1.0/patches-1.1.0.mpp",
-  "signature_download_url": "https://github.com/anxyis/anxy-patches/releases/download/v1.1.0/patches-1.1.0.mpp.asc",
-  "version": "1.1.0"
+  "created_at": "2026-08-20T15:54:15",
+  "description": "# [1.2.0](https://github.com/anxyis/anxy-patches/compare/v1.1.0...v1.2.0) (2026-08-20)\n\n\n### Features\n\n* **daemon:** integrate PopupDismisser background runtime daemon to suppress all dynamic dialogs ([fbe3edb](https://github.com/anxyis/anxy-patches/commit/fbe3edbc27d5e6a4801671ed9f3d76649831be67))",
+  "download_url": "https://github.com/anxyis/anxy-patches/releases/download/v1.2.0/patches-1.2.0.mpp",
+  "signature_download_url": "https://github.com/anxyis/anxy-patches/releases/download/v1.2.0/patches-1.2.0.mpp.asc",
+  "version": "1.2.0"
 }

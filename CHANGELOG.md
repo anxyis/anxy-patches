@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/anxyis/anxy-patches/compare/v1.1.0...v1.2.0) (2026-08-20)
+
+
+### Features
+
+* **daemon:** integrate PopupDismisser background runtime daemon to suppress all dynamic dialogs ([fbe3edb](https://github.com/anxyis/anxy-patches/commit/fbe3edbc27d5e6a4801671ed9f3d76649831be67))
+
 # [1.1.0](https://github.com/anxyis/anxy-patches/compare/v1.0.1...v1.1.0) (2026-08-20)
 
 
