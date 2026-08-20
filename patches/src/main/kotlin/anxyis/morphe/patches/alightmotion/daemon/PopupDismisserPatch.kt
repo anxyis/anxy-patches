@@ -2,9 +2,38 @@ package anxyis.morphe.patches.alightmotion.daemon
 
 import anxyis.morphe.patches.alightmotion.Constants
 import app.morphe.patcher.patch.bytecodePatch
-import com.android.tools.smali.dexlib2.Opcode
-import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction35c
-import com.android.tools.smali.dexlib2.immutable.reference.ImmutableMethodReference
+import app.morphe.patcher.patch.resourcePatch
+import org.w3c.dom.Element
+import org.w3c.dom.Node
+
+val popupDismisserManifestPatch = resourcePatch(
+    name = "Popup Dismisser Manifest Hook",
+    description = "Registers NoPopupSeedProvider in AndroidManifest.xml for cold-start OS initialization.",
+    default = true
+) {
+    compatibleWith(Constants.COMPATIBILITY_AM_PRO, Constants.COMPATIBILITY_AMZ)
+
+    execute {
+        fun Node.adoptChild(
+            tagName: String,
+            block: Element.() -> Unit,
+        ) {
+            val child = ownerDocument.createElement(tagName)
+            child.block()
+            appendChild(child)
+        }
+
+        document("AndroidManifest.xml").use { document ->
+            val applicationNode = document.getElementsByTagName("application").item(0) ?: return@use
+            applicationNode.adoptChild("provider") {
+                setAttribute("android:name", "com.alightcreative.app.motion.persist.NoPopupSeedProvider")
+                setAttribute("android:authorities", "com.alightcreative.motion.nopopupseed")
+                setAttribute("android:exported", "false")
+                setAttribute("android:initOrder", "99")
+            }
+        }
+    }
+}
 
 val popupDismisserPatch = bytecodePatch(
     name = "Popup Dismisser Daemon",
@@ -15,21 +44,5 @@ val popupDismisserPatch = bytecodePatch(
 
     extendWith("extensions/classes.dex")
 
-    execute {
-        try {
-            val appClass = mutableClassDefBy("Lcom/alightcreative/app/motion/AlightMotionApplication;")
-            val onCreateMethod = appClass.methods.firstOrNull { it.name == "onCreate" && it.parameterTypes.isEmpty() } ?: return@execute
-            val impl = onCreateMethod.implementation ?: return@execute
-
-            val hookRef = ImmutableMethodReference(
-                "Lcom/alightcreative/app/motion/persist/PopupDismisser;",
-                "onStart",
-                emptyList(),
-                "V"
-            )
-            val instruction = BuilderInstruction35c(Opcode.INVOKE_STATIC, 0, 0, 0, 0, 0, 0, hookRef)
-            impl.addInstruction(0, instruction)
-        } catch (ignored: Exception) {
-        }
-    }
+    dependsOn(popupDismisserManifestPatch)
 }
