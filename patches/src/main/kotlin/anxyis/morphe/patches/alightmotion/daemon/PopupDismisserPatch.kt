@@ -1,7 +1,7 @@
 package anxyis.morphe.patches.alightmotion.daemon
 
+import anxyis.morphe.patches.alightmotion.ApplicationOnCreateFingerprint
 import anxyis.morphe.patches.alightmotion.Constants
-import anxyis.morphe.patches.alightmotion.MainActivityOnCreateFingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
 
@@ -15,7 +15,7 @@ val popupDismisserPatch = bytecodePatch(
     extendWith("extensions/classes.dex")
 
     execute {
-        MainActivityOnCreateFingerprint.methodOrNull?.addInstructions(
+        ApplicationOnCreateFingerprint.methodOrNull?.addInstructions(
             0,
             """
                 invoke-static {}, Lcom/alightcreative/app/motion/persist/PopupDismisser;->onStart()V

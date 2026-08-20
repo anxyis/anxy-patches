@@ -25,11 +25,11 @@ object ZzwXyzFingerprint : Fingerprint(
     }
 )
 
-object MainActivityOnCreateFingerprint : Fingerprint(
+object ApplicationOnCreateFingerprint : Fingerprint(
     custom = { method, classDef ->
-        (classDef.type == "Lcom/alightcreative/app/motion/activities/main/MainActivity;" ||
-         classDef.type == "Lcom/alightcreative/motion/app/Main2Activity;" ||
-         classDef.type == "Lcom/pairip/application/Application;") &&
-        (method.name == "onCreate" || method.name == "attachBaseContext")
+        classDef.type == "Lcom/alightcreative/app/motion/AlightMotionApplication;" &&
+                method.name == "onCreate" &&
+                method.parameterTypes.isEmpty() &&
+                method.implementation != null
     }
 )

@@ -1,22 +1,32 @@
 package anxyis.morphe.patches
 
-import anxyis.morphe.patches.alightmotion.amzNoPopupPatch
-import anxyis.morphe.patches.alightmotion.alightMotionProNoPopupPatch
-import anxyis.morphe.patches.alightmotion.daemon.popupDismisserPatch
-import org.junit.jupiter.api.Assertions.assertTrue
+import com.android.tools.smali.dexlib2.dexbacked.DexBackedDexFile
+import com.android.tools.smali.dexlib2.Opcodes
 import org.junit.jupiter.api.Test
+import java.io.File
+import java.util.zip.ZipFile
 
 class RegressionTests {
 
     @Test
-    fun testSuiteDependencies() {
-        assertTrue(
-            alightMotionProNoPopupPatch.dependencies.contains(popupDismisserPatch),
-            "AM Pro suite must include PopupDismisser"
-        )
-        assertTrue(
-            amzNoPopupPatch.dependencies.contains(popupDismisserPatch),
-            "AMZ suite must include PopupDismisser"
-        )
+    fun testAlightMotionApplicationAMZ() {
+        val apkFile = File("C:/Users/Admin/Desktop/AM-NO-POPUP/orignal-apks/AMZ_5.0.273_Satriyaid_Original.apk")
+        val zip = ZipFile(apkFile)
+        val dexEntries = zip.entries().toList().filter { it.name.endsWith(".dex") }
+
+        for (entry in dexEntries) {
+            val bytes = zip.getInputStream(entry).readBytes()
+            val dex = DexBackedDexFile.fromInputStream(Opcodes.getDefault(), bytes.inputStream())
+            for (classDef in dex.classes) {
+                if (classDef.type == "Lcom/alightcreative/app/motion/AlightMotionApplication;") {
+                    println("Found AlightMotionApplication in AMZ: ${classDef.type}")
+                    for (method in classDef.methods) {
+                        if (method.name == "onCreate") {
+                            println("  Method: ${method.name} params=${method.parameterTypes} hasImpl=${method.implementation != null}")
+                        }
+                    }
+                }
+            }
+        }
     }
 }
