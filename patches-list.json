@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated by release.yml.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "patches": [
     {
       "name": "AMZ Popup Suppression (Complete Suite)",

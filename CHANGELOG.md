@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/anxyis/anxy-patches/compare/v1.0.1...v1.1.0) (2026-08-20)
+
+
+### Features
+
+* **alightmotion:** add dedicated AM Pro 5.0.273.1028420 suite and graceful native guards ([ccd7637](https://github.com/anxyis/anxy-patches/commit/ccd7637941c8187879246e2f30265548636704a8))
+
 ## [1.0.1](https://github.com/anxyis/anxy-patches/compare/v1.0.0...v1.0.1) (2026-08-20)
 
 
