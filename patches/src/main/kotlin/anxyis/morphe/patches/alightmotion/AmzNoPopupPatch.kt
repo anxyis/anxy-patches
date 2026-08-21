@@ -30,13 +30,12 @@ val amzNoPopupPatch = bytecodePatch(
                 mutableClass.methods.remove(oldMethod)
                 val paramCount = oldMethod.parameters.size + (if ((oldMethod.accessFlags and 0x0008) == 0) 1 else 0)
                 val registerCount = max(paramCount, 8)
-                val cleanFlags = oldMethod.accessFlags and 0x0100.inv() // Clear ACC_NATIVE
                 val newMethod = ImmutableMethod(
                     oldMethod.definingClass,
                     oldMethod.name,
                     oldMethod.parameters,
                     oldMethod.returnType,
-                    cleanFlags,
+                    oldMethod.accessFlags,
                     oldMethod.annotations,
                     oldMethod.hiddenApiRestrictions,
                     ImmutableMethodImplementation(
@@ -50,80 +49,19 @@ val amzNoPopupPatch = bytecodePatch(
             }
         }
 
-        // 2. M8: Modded by Satriyaid Dialog (zzw.xyz -> return-void)
-        val zzwMethod = ZzwXyzFingerprint.methodOrNull
-        if (zzwMethod != null) {
-            val mutableClass = mutableClassDefBy(ZzwXyzFingerprint.classDef)
-            val oldMethod = mutableClass.methods.firstOrNull { it.name == "xyz" }
-            if (oldMethod != null) {
-                mutableClass.methods.remove(oldMethod)
-                val isStatic = (oldMethod.accessFlags and 0x0008) != 0
-                val pCount = oldMethod.parameters.size + (if (isStatic) 0 else 1)
-                val regCount = max(pCount, 8)
-                val cleanFlags = oldMethod.accessFlags and 0x0100.inv() // Clear ACC_NATIVE
-                val newMethod = ImmutableMethod(
-                    oldMethod.definingClass,
-                    oldMethod.name,
-                    oldMethod.parameters,
-                    oldMethod.returnType,
-                    cleanFlags,
-                    oldMethod.annotations,
-                    oldMethod.hiddenApiRestrictions,
-                    ImmutableMethodImplementation(
-                        regCount,
-                        listOf(ImmutableInstruction10x(Opcode.RETURN_VOID)),
-                        null,
-                        null
-                    )
-                ).toMutable()
-                mutableClass.methods.add(newMethod)
-            }
-        }
-
-        // 3. M7: Project Wizard (zzzb.vbd -> return-void)
-        val zzzbMethod = ZzzbVbdFingerprint.methodOrNull
-        if (zzzbMethod != null) {
-            val mutableClass = mutableClassDefBy(ZzzbVbdFingerprint.classDef)
-            val vbd = mutableClass.methods.firstOrNull { it.name == "vbd" }
-            if (vbd != null) {
-                mutableClass.methods.remove(vbd)
-                val pCount = vbd.parameters.size + (if ((vbd.accessFlags and 0x0008) != 0) 0 else 1)
-                val regCount = max(pCount, 8)
-                val cleanFlags = vbd.accessFlags and 0x0100.inv() // Clear ACC_NATIVE
-                mutableClass.methods.add(
-                    ImmutableMethod(
-                        vbd.definingClass,
-                        vbd.name,
-                        vbd.parameters,
-                        vbd.returnType,
-                        cleanFlags,
-                        vbd.annotations,
-                        vbd.hiddenApiRestrictions,
-                        ImmutableMethodImplementation(
-                            regCount,
-                            listOf(ImmutableInstruction10x(Opcode.RETURN_VOID)),
-                            null,
-                            null
-                        )
-                    ).toMutable()
-                )
-            }
-        }
-
-        // 4. Anti-Exit: System.exit -> return-void
+        // 2. Anti-Exit: System.exit -> return-void
         val exitMethod = SystemExitFingerprint.methodOrNull
         if (exitMethod != null) {
             val mutableClass = mutableClassDefBy(SystemExitFingerprint.classDef)
             val oldMethod = mutableClass.methods.firstOrNull { it.name == "n" }
             if (oldMethod != null) {
                 mutableClass.methods.remove(oldMethod)
-                val cleanFlags = oldMethod.accessFlags and 0x0100.inv()
                 val newMethod = ImmutableMethod(
                     oldMethod.definingClass,
                     oldMethod.name,
                     oldMethod.parameters,
                     oldMethod.returnType,
-                    cleanFlags,
+                    oldMethod.accessFlags,
                     oldMethod.annotations,
                     oldMethod.hiddenApiRestrictions,
                     ImmutableMethodImplementation(
@@ -137,20 +75,19 @@ val amzNoPopupPatch = bytecodePatch(
             }
         }
 
-        // 5. Anti-Exit: Process.killProcess -> return-void
+        // 3. Anti-Exit: Process.killProcess -> return-void
         val killMethod = KillProcessFingerprint.methodOrNull
         if (killMethod != null) {
             val mutableClass = mutableClassDefBy(KillProcessFingerprint.classDef)
             val oldMethod = mutableClass.methods.firstOrNull { it.name == "bb" }
             if (oldMethod != null) {
                 mutableClass.methods.remove(oldMethod)
-                val cleanFlags = oldMethod.accessFlags and 0x0100.inv()
                 val newMethod = ImmutableMethod(
                     oldMethod.definingClass,
                     oldMethod.name,
                     oldMethod.parameters,
                     oldMethod.returnType,
-                    cleanFlags,
+                    oldMethod.accessFlags,
                     oldMethod.annotations,
                     oldMethod.hiddenApiRestrictions,
                     ImmutableMethodImplementation(
@@ -164,7 +101,7 @@ val amzNoPopupPatch = bytecodePatch(
             }
         }
 
-        // 6. M4: Injects PopupDismisser into AlightMotionApplication.onCreate
+        // 4. M4: Injects PopupDismisser into AlightMotionApplication.onCreate
         val appMethod = AlightMotionAppFingerprint.methodOrNull
         if (appMethod != null) {
             val mutableClass = mutableClassDefBy(AlightMotionAppFingerprint.classDef)
