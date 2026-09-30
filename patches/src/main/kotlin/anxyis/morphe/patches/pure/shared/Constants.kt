@@ -21,10 +21,11 @@ import app.morphe.patcher.patch.Compatibility
 val ALIGHT_5270 = Compatibility(
     name = "Alight Motion",
     packageName = "com.alightcreative.motion",
+    description = "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
     appIconColor = 0x00FFA8,
     apkFileType = ApkFileType.APK,
     targets = listOf(
-        AppTarget(version = "5.0.270.1002578", versionCode = 1002578),
-        AppTarget(version = "5.0.270", versionCode = 1002578),
+        AppTarget(version = "5.0.270.1002578", versionCode = 1002578, description = "Original APK from APKMirror (see app description for link)."),
+        AppTarget(version = "5.0.270", versionCode = 1002578, description = "Original APK from APKMirror (see app description for link)."),
     ),
 )

@@ -31,6 +31,9 @@
 2. Select your target application APK (e.g. Alight Motion `5.0.270`).
 3. Select the desired patches and tap **Patch**!
 
+> [!NOTE]
+> **Where to get the original 5.0.270 APK:** open [APKMirror's Alight Motion uploads](https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor) and download **version `5.0.270.1002578`** (not the newest one).
+
 #### What does the Alight Motion suite do?
 It unlocks the full premium function set on `5.0.270.1002578`:
 - **Premium state + membership gates** — all Pro-gated UI and features.
