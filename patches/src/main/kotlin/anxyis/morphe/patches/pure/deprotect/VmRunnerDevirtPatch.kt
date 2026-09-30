@@ -94,8 +94,8 @@ private val SHAPE_B = listOf(
 
 @Suppress("unused")
 val vmRunnerDevirtPatch = bytecodePatch(
-    name = "PairIP VMRunner call-site neutralization",
-    description = "Neutralizes the 20 third-party VMRunner.invoke SDK call sites (5.0.270).",
+    name = "Block background checks",
+    description = "Stops hidden background verification calls.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

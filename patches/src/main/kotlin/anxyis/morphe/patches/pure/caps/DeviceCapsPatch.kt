@@ -60,8 +60,8 @@ private object PersistNr : Fingerprint(
 
 @Suppress("unused")
 val deviceCapsPatch = bytecodePatch(
-    name = "Device capability unlock",
-    description = "Forces persist/Nr caps getters (2160p, layers, checks pass) on 5.0.270.",
+    name = "Full quality export",
+    description = "Unlocks the highest export resolution and layer limits.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

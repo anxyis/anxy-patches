@@ -30,8 +30,8 @@ private object StartupLaunch : Fingerprint(
 
 @Suppress("unused")
 val startupLauncherKillPatch = bytecodePatch(
-    name = "PairIP StartupLauncher kill",
-    description = "Neutralizes StartupLauncher.launch() (5.0.270): VM/string-restore bootstrap never runs.",
+    name = "Skip startup lock",
+    description = "Skips the startup block so the app opens straight into pro mode.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

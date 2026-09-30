@@ -90,8 +90,8 @@ private val SETTINGS_FIELDS = listOf(
 
 @Suppress("unused")
 val encoderEffectSettingsGatesPatch = bytecodePatch(
-    name = "Encoder / effect / settings gates",
-    description = "Forces isEncoderSupported, readEffect premium flag, and 4 settings fields (5.0.270).",
+    name = "Pro video tools",
+    description = "Unlocks pro encoder options, effects and settings.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

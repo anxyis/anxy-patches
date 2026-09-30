@@ -30,8 +30,8 @@ private const val CALL = "onActivityCreate"
 
 @Suppress("unused")
 val licenseCallStripPatch = bytecodePatch(
-    name = "PairIP license call strip",
-    description = "Removes LicenseClientV3.onActivityCreate calls from all activities (5.0.270: 70 sites).",
+    name = "No license popups",
+    description = "Removes license checks from every screen so no paywall pops up.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

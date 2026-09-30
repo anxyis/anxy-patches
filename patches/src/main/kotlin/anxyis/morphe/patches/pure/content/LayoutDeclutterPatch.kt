@@ -50,8 +50,8 @@ private fun findById(
 
 @Suppress("unused")
 val layoutDeclutterPatch = resourcePatch(
-    name = "Layout declutter",
-    description = "Hides tutorial button and account promo/ranking cards (5.0.270).",
+    name = "Cleaner home screen",
+    description = "Hides the tutorial button and promo cards.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

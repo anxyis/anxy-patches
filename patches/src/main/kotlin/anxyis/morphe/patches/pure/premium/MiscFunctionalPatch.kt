@@ -85,8 +85,8 @@ import com.android.tools.smali.dexlib2.iface.reference.MethodReference
  */
 @Suppress("unused")
 val miscFunctionalPatch = bytecodePatch(
-    name = "Misc functional edits",
-    description = "WIo/VJ early-false, ang/NpA kind-kill, Pk ctor/enum, LF sig-check gut, e4H code, ProxyAuth null, fVp.DaL (5.0.270).",
+    name = "Small pro fixes",
+    description = "Small behind-the-scenes fixes that keep pro working.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

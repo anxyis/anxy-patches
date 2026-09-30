@@ -19,7 +19,7 @@ import app.morphe.patcher.patch.Compatibility
  * base.apk sha256 cafd733c6bbc12d17b8a43a5f779587c89b03cc8e64f234e6fc881b0f1c99e87
  */
 val ALIGHT_5270 = Compatibility(
-    name = "Alight Motion Pro",
+    name = "Alight Motion",
     packageName = "com.alightcreative.motion",
     appIconColor = 0x00FFA8,
     apkFileType = ApkFileType.APK,

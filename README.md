@@ -13,7 +13,7 @@
 
 | App | Package | Patches |
 |---|---|---|
-| **Alight Motion Pro** 🎯 | `com.alightcreative.motion` | <ul><li>Premium Unlock (Complete Suite — 5.0.270)</li><li>PairIP License Bypass + Force-Update Suppression</li><li>Membership & Settings Gates Unlock</li><li>Device Capability Unlock (Max Res/Layers)</li><li>Encoder / Effect / Import Features Unlock</li><li>Effects Content Bundle (353 effects + thumbnails)</li><li>Dev Settings Extras + Home Declutter</li></ul> |
+| **Alight Motion** 🎯 | `com.alightcreative.motion` | <ul><li>Premium Unlock (Complete Suite — 5.0.270)</li><li>PairIP License Bypass + Force-Update Suppression</li><li>Membership & Settings Gates Unlock</li><li>Device Capability Unlock (Max Res/Layers)</li><li>Encoder / Effect / Import Features Unlock</li><li>Effects Content Bundle (353 effects + thumbnails)</li><li>Dev Settings Extras + Home Declutter</li></ul> |
 
 <br/>
 
@@ -31,7 +31,7 @@
 2. Select your target application APK (e.g. Alight Motion `5.0.270`).
 3. Select the desired patches and tap **Patch**!
 
-#### What does the Alight Motion Pro suite do?
+#### What does the Alight Motion suite do?
 It unlocks the full premium function set on `5.0.270.1002578`:
 - **Premium state + membership gates** — all Pro-gated UI and features.
 - **PairIP license bypass** — no license checks, no paywalls, no forced update.

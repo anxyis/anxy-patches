@@ -60,8 +60,8 @@ private object Jy6UdQ : Fingerprint(
 
 @Suppress("unused")
 val premiumCorePatch = bytecodePatch(
-    name = "Premium benefit state",
-    description = "Forces membership benefit gates true (account/Nr.kB + account/Jy6.Ud, 5.0.270).",
+    name = "Premium ON",
+    description = "Switches premium membership on.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

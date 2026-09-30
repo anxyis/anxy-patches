@@ -54,8 +54,8 @@ private object PopulateList : Fingerprint(
 
 @Suppress("unused")
 val anonymousAuthPatch = bytecodePatch(
-    name = "Anonymous auth swap",
-    description = "Repoints Google sign-in branch to anonymous sign-in (5.0.270 AuthMethodPickerActivity).",
+    name = "Easy sign-in",
+    description = "Sign in without needing a Google account.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

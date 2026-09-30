@@ -75,8 +75,8 @@ private val SWITCHES = listOf(
 
 @Suppress("unused")
 val devPrefsSectionPatch = resourcePatch(
-    name = "Dev Settings Extra Features",
-    description = "Adds the Extra Features toggle section to Dev Settings (5.0.270).",
+    name = "Extra settings",
+    description = "Adds extra toggles in Developer Settings.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

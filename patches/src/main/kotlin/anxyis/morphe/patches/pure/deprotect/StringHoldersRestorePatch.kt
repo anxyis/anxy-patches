@@ -25,8 +25,8 @@ import anxyis.morphe.patches.pure.shared.bundledText
  */
 @Suppress("unused")
 val stringHoldersRestorePatch = bytecodePatch(
-    name = "R8 string holders restore",
-    description = "Bakes static string initializers for the 32 VM-populated holder classes (5.0.270: 1463 strings).",
+    name = "App text fix",
+    description = "Restores app text needed to keep everything working.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

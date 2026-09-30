@@ -78,8 +78,8 @@ private object V3CheckInternal : Fingerprint(
 )
 
 private fun killV3() = bytecodePatch(
-    name = "PairIP V3 client kill",
-    description = "Neutralizes LicenseClientV3 entry points (5.0.270 licensecheck3).",
+    name = "License check off",
+    description = "Turns off the license check so pro features stay unlocked.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

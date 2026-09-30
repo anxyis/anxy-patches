@@ -122,8 +122,8 @@ private val GATES = listOf(
 
 @Suppress("unused")
 val membershipGatesPatch = bytecodePatch(
-    name = "Membership gates sweep",
-    description = "Forces the long tail of membership/benefit gates true (5.0.270: 60 sites).",
+    name = "Unlock all pro features",
+    description = "Unlocks all remaining pro-gated features.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

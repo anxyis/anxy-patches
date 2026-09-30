@@ -31,8 +31,8 @@ import java.nio.file.StandardCopyOption
  */
 @Suppress("unused")
 val manifestPatch = resourcePatch(
-    name = "PairIP manifest bypass",
-    description = "Restores stock Application class, removes CHECK_LICENSE, bumps versionCode past ForceUpdater (5.0.270).",
+    name = "No forced updates",
+    description = "Stops the app from forcing you to update.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {
@@ -88,8 +88,8 @@ val manifestPatch = resourcePatch(
  */
 @Suppress("unused")
 val effectsBundlePatch = resourcePatch(
-    name = "Effects content bundle",
-    description = "Adds 353 effect XMLs + 292 thumbnails + banner (renders via stock pipeline).",
+    name = "New effects pack",
+    description = "Adds 350+ extra effects with previews.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {

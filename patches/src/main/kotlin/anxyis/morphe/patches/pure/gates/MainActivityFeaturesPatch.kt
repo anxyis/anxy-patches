@@ -77,8 +77,8 @@ private object OnActivityResult : Fingerprint(
 
 @Suppress("unused")
 val mainActivityFeaturesPatch = bytecodePatch(
-    name = "MainActivity import features",
-    description = "Ports multi-project zip import (Zjm redirect + onActivityResult handler) on 5.0.270.",
+    name = "Multi-project import",
+    description = "Lets you open multi-project files.",
 ) {
     compatibleWith(ALIGHT_5270)
     execute {
