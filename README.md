@@ -66,3 +66,9 @@ Yes! The repository is structured to modularly support additional applications o
 ## License
 
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0). See [LICENSE](LICENSE) for details.
+
+---
+
+## Credits
+
+**Alight Motion extra effects** — effect XMLs and thumbnails bundled with these patches are credited to **Toji Motion** and **Tanryu**. All unlock behavior is original work; only the bonus effect content carries their credit.
