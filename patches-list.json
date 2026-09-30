@@ -1,102 +1,10 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated by release.yml.",
-  "version": "2.1.1",
+  "version": "2.10.0",
   "patches": [
     {
-      "name": "After Motion Z+ Popup Suppression (Complete Suite)",
-      "description": "Eliminates all startup, update, and modded-by popups in After Motion Z+ (v5.0.273).",
-      "default": true,
-      "dependencies": [
-        "BytecodePatch",
-        "BytecodePatch",
-        "BytecodePatch",
-        "BytecodePatch",
-        "RawResourcePatch",
-        "BytecodePatch"
-      ],
-      "compatiblePackages": [
-        {
-          "packageName": "com.alightcreative.motion",
-          "name": "After Motion Z+",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Alight Motion Pro Popup Suppression (Complete Suite)",
-      "description": "Eliminates all startup, update, and modded-by popups in Alight Motion Pro (BangAlbin mod).",
-      "default": true,
-      "dependencies": [
-        "BytecodePatch",
-        "BytecodePatch",
-        "RawResourcePatch",
-        "BytecodePatch"
-      ],
-      "compatiblePackages": [
-        {
-          "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Modded By Satriyaid Dialog Destruction",
-      "description": "Completely eradicates and severs all ModdedBySatriyaid and TGSatriyaidChannel popup reflection classes at the root.",
+      "name": "Anonymous auth swap",
+      "description": "Repoints Google sign-in branch to anonymous sign-in (5.0.270 AuthMethodPickerActivity).",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
@@ -104,58 +12,30 @@
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion Pro",
           "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
           "signatures": null,
           "targets": [
             {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
               "isExperimental": false,
               "minSdk": null,
               "description": null
             },
             {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        },
-        {
-          "packageName": "com.alightcreative.motion",
-          "name": "After Motion Z+",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
               "isExperimental": false,
               "minSdk": null,
               "description": null
@@ -166,201 +46,8 @@
       "options": []
     },
     {
-      "name": "Modded By Satriyaid Dialog Suppression",
-      "description": "No-ops zzw.xyz startup dialog entry.",
-      "default": true,
-      "dependencies": [],
-      "compatiblePackages": [
-        {
-          "packageName": "com.alightcreative.motion",
-          "name": "After Motion Z+",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Native Server 1 Startup Gate Bypass",
-      "description": "NOPs native gate cbz branch in libsatriyaid.so at 0x585c0.",
-      "default": true,
-      "dependencies": [],
-      "compatiblePackages": [
-        {
-          "packageName": "com.alightcreative.motion",
-          "name": "After Motion Z+",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "New Project Wizard Suppression",
-      "description": "No-ops zzzb.vbd, zzzb.vwp, and forces zzzb.uio to return false.",
-      "default": true,
-      "dependencies": [],
-      "compatiblePackages": [
-        {
-          "packageName": "com.alightcreative.motion",
-          "name": "After Motion Z+",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Popup Dismisser Daemon",
-      "description": "Injects background runtime dialog dismisser and preference seeder to eliminate all modder popups.",
-      "default": true,
-      "dependencies": [
-        "ResourcePatch"
-      ],
-      "compatiblePackages": [
-        {
-          "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        },
-        {
-          "packageName": "com.alightcreative.motion",
-          "name": "After Motion Z+",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Popup Dismisser Manifest Hook",
-      "description": "Registers NoPopupSeedProvider in AndroidManifest.xml for cold-start OS initialization.",
+      "name": "Dev Settings Extra Features",
+      "description": "Adds the Extra Features toggle section to Dev Settings (5.0.270).",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
@@ -368,58 +55,30 @@
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion Pro",
           "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
           "signatures": null,
           "targets": [
             {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
               "isExperimental": false,
               "minSdk": null,
               "description": null
             },
             {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        },
-        {
-          "packageName": "com.alightcreative.motion",
-          "name": "After Motion Z+",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
               "isExperimental": false,
               "minSdk": null,
               "description": null
@@ -430,67 +89,39 @@
       "options": []
     },
     {
-      "name": "Seed Default Preferences",
-      "description": "Seeds initial suppression preferences in shared_prefs/.",
+      "name": "Device capability unlock",
+      "description": "Forces persist/Nr caps getters (2160p, layers, checks pass) on 5.0.270.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "After Motion Z+",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        },
-        {
-          "packageName": "com.alightcreative.motion",
           "name": "Alight Motion Pro",
           "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
           "signatures": null,
           "targets": [
             {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
               "isExperimental": false,
               "minSdk": null,
               "description": null
             },
             {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
               "isExperimental": false,
               "minSdk": null,
               "description": null
@@ -501,67 +132,555 @@
       "options": []
     },
     {
-      "name": "Updates Required Popup Suppression",
-      "description": "No-ops fq.ab dialog builder in Firebase Analytics wrapper.",
+      "name": "Effects content bundle",
+      "description": "Adds 353 effect XMLs + 292 thumbnails + banner (renders via stock pipeline).",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "After Motion Z+",
+          "name": "Alight Motion Pro",
           "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
           "signatures": null,
           "targets": [
             {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
               "isExperimental": false,
               "minSdk": null,
               "description": null
             },
             {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "5.0.273",
-              "versionCodes": null,
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
               "isExperimental": false,
               "minSdk": null,
               "description": null
             }
           ]
-        },
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Encoder / effect / settings gates",
+      "description": "Forces isEncoderSupported, readEffect premium flag, and 4 settings fields (5.0.270).",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion Pro",
           "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
           "signatures": null,
           "targets": [
             {
-              "version": "5.0.273.1028420",
-              "versionCodes": null,
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
               "isExperimental": false,
               "minSdk": null,
               "description": null
             },
             {
-              "version": "5.0.273.1028426",
-              "versionCodes": null,
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Layout declutter",
+      "description": "Hides tutorial button and account promo/ranking cards (5.0.270).",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
               "isExperimental": false,
               "minSdk": null,
               "description": null
             },
             {
-              "version": "5.0.273",
-              "versionCodes": null,
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "MainActivity import features",
+      "description": "Ports multi-project zip import (Zjm redirect + onActivityResult handler) on 5.0.270.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Membership gates sweep",
+      "description": "Forces the long tail of membership/benefit gates true (5.0.270: 60 sites).",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Misc functional edits",
+      "description": "WIo/VJ early-false, ang/NpA kind-kill, Pk ctor/enum, LF sig-check gut, e4H code, ProxyAuth null, fVp.DaL (5.0.270).",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "PairIP StartupLauncher kill",
+      "description": "Neutralizes StartupLauncher.launch() (5.0.270): VM/string-restore bootstrap never runs.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "PairIP V3 client kill",
+      "description": "Neutralizes LicenseClientV3 entry points (5.0.270 licensecheck3).",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "PairIP VMRunner call-site neutralization",
+      "description": "Neutralizes the 20 third-party VMRunner.invoke SDK call sites (5.0.270).",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "PairIP license call strip",
+      "description": "Removes LicenseClientV3.onActivityCreate calls from all activities (5.0.270: 70 sites).",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "PairIP manifest bypass",
+      "description": "Restores stock Application class, removes CHECK_LICENSE, bumps versionCode past ForceUpdater (5.0.270).",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Premium benefit state",
+      "description": "Forces membership benefit gates true (account/Nr.kB + account/Jy6.Ud, 5.0.270).",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "R8 string holders restore",
+      "description": "Bakes static string initializers for the 32 VM-populated holder classes (5.0.270: 1463 strings).",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.alightcreative.motion",
+          "name": "Alight Motion Pro",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00FFA8",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.0.270.1002578",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "5.0.270",
+              "versionCodes": {
+                "ARM64_V8A": 1002578,
+                "ARMEABI_V7A": 1002578,
+                "X86_64": 1002578,
+                "X86": 1002578
+              },
               "isExperimental": false,
               "minSdk": null,
               "description": null

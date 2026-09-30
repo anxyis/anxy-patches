@@ -1,3 +1,16 @@
+# [2.10.0](https://github.com/anxyis/anxy-patches/compare/v2.9.0...v2.10.0) (2026-09-30)
+
+
+### Bug Fixes
+
+* remove stale RegressionTests referencing deleted popup suite ([840884b](https://github.com/anxyis/anxy-patches/commit/840884b64b414dca2c40d759f5963628eca61d65))
+
+
+### Features
+
+* Alight Motion Pro 5.0.270 unlock suite + effects bundle ([6f3faef](https://github.com/anxyis/anxy-patches/commit/6f3faef5d41f2313cb8176ae96ddca5d1a934993))
+* **release:** 2.9.0 - PairIP SignatureCheck verifySignatureMatches bypass ([5c4eed1](https://github.com/anxyis/anxy-patches/commit/5c4eed12d5af2da12a85e3db36ba7d440cab0afe))
+
 ## [2.1.1](https://github.com/anxyis/anxy-patches/compare/v2.1.0...v2.1.1) (2026-08-20)
 
 
