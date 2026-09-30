@@ -90,6 +90,7 @@ val manifestPatch = resourcePatch(
 val effectsBundlePatch = resourcePatch(
     name = "New effects pack",
     description = "Adds 350+ extra effects with previews.",
+    default = false,
 ) {
     compatibleWith(ALIGHT_5270)
     execute {
