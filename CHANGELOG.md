@@ -1,3 +1,10 @@
+# [2.11.0](https://github.com/anxyis/anxy-patches/compare/v2.10.3...v2.11.0) (2026-09-30)
+
+
+### Features
+
+* 3D layer rotation playback (X/Y engine + project import) ([f26f1ab](https://github.com/anxyis/anxy-patches/commit/f26f1abaf0b94145cd722ecbc862bfb189506879))
+
 ## [2.10.3](https://github.com/anxyis/anxy-patches/compare/v2.10.2...v2.10.3) (2026-09-30)
 
 
