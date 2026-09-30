@@ -15,10 +15,11 @@
 |---|---|---|
 | **After Motion Z+** 🎯 💻 | `com.alightcreative.motion` | <ul><li>AMZ Popup Suppression (Complete Suite)</li><li>Native Server 1 Startup Gate Bypass</li><li>New Project Wizard Suppression</li><li>Modded By Satriyaid Dialog Suppression</li><li>Updates Required Popup Suppression</li><li>Seed Default Preferences</li></ul> |
 | **Alight Motion Pro** 🎯 | `com.alightcreative.motion` | <ul><li>Updates Required Popup Suppression</li><li>Seed Default Preferences</li></ul> |
+| **Alight Motion Pro** 🎯 | `com.alightcreative.motion` | <ul><li>Premium Unlock (Complete Suite — 5.0.270)</li><li>PairIP License Bypass + Force-Update Suppression</li><li>Membership & Settings Gates Unlock</li><li>Device Capability Unlock (Max Res/Layers)</li><li>Encoder / Effect / Import Features Unlock</li><li>Effects Content Bundle (353 effects + thumbnails)</li><li>Dev Settings Extras + Home Declutter</li></ul> |
 
 <br/>
 
-🎯 _This app has strict target version requirements defined in the patch (e.g. `5.0.273.1028426`, `5.0.273`)._\
+🎯 _This app has strict target version requirements defined in the patch (e.g. `5.0.273.1028426`, `5.0.273`, `5.0.270.1002578`)._\
 💻 _These patches include native AArch64 code modifications targeting `arm64-v8a` CPUs._
 
 <br/>
