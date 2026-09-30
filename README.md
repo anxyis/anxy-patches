@@ -13,8 +13,6 @@
 
 | App | Package | Patches |
 |---|---|---|
-| **After Motion Z+** 🎯 💻 | `com.alightcreative.motion` | <ul><li>AMZ Popup Suppression (Complete Suite)</li><li>Native Server 1 Startup Gate Bypass</li><li>New Project Wizard Suppression</li><li>Modded By Satriyaid Dialog Suppression</li><li>Updates Required Popup Suppression</li><li>Seed Default Preferences</li></ul> |
-| **Alight Motion Pro** 🎯 | `com.alightcreative.motion` | <ul><li>Updates Required Popup Suppression</li><li>Seed Default Preferences</li></ul> |
 | **Alight Motion Pro** 🎯 | `com.alightcreative.motion` | <ul><li>Premium Unlock (Complete Suite — 5.0.270)</li><li>PairIP License Bypass + Force-Update Suppression</li><li>Membership & Settings Gates Unlock</li><li>Device Capability Unlock (Max Res/Layers)</li><li>Encoder / Effect / Import Features Unlock</li><li>Effects Content Bundle (353 effects + thumbnails)</li><li>Dev Settings Extras + Home Declutter</li></ul> |
 
 <br/>
@@ -30,16 +28,17 @@
 
 #### How do I use this with Morphe Manager?
 1. Open [**this link**](https://morphe.software/add-source?github=anxyis/anxy-patches) directly on your Android phone, or manually add `anxyis/anxy-patches` under **Morphe Manager** &rarr; **Settings** &rarr; **Sources**.
-2. Select your target application APK (e.g. After Motion Z+ `5.0.273`).
+2. Select your target application APK (e.g. Alight Motion `5.0.270`).
 3. Select the desired patches and tap **Patch**!
 
-#### What does the AMZ Popup Suppression suite do?
-It completely eliminates:
-- The startup **"SERVER 1 / Follow all my social media"** dialog.
-- The **"Updates Required"** mandatory Firebase prompt.
-- The intrusive multi-step **Project Wizard** dialog upon creating projects.
-- The **"Modded by Satriyaid"** alert dialogs.
-- The **"VISIT LINK AND DONT SHOW AGAIN"** banner in the Effect Browser.
+#### What does the Alight Motion Pro suite do?
+It unlocks the full premium function set on `5.0.270.1002578`:
+- **Premium state + membership gates** — all Pro-gated UI and features.
+- **PairIP license bypass** — no license checks, no paywalls, no forced update.
+- **Device capability unlock** — max export resolution and layer counts.
+- **Encoder / effect / import features** — previously gated codecs and tools.
+- **Effects content bundle** — 353 effect XMLs + thumbnails + banner.
+- **Dev Settings extras + home declutter** — extra toggles, no tutorial button.
 
 #### Will more apps be added?
 Yes! The repository is structured to modularly support additional applications over time.
