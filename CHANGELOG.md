@@ -1,3 +1,10 @@
+## [2.10.2](https://github.com/anxyis/anxy-patches/compare/v2.10.1...v2.10.2) (2026-09-30)
+
+
+### Bug Fixes
+
+* point users to APKMirror for the original 5.0.270 APK ([b54946a](https://github.com/anxyis/anxy-patches/commit/b54946afdb2e2f3e5d484827d30c09a7d584f1da))
+
 ## [2.10.1](https://github.com/anxyis/anxy-patches/compare/v2.10.0...v2.10.1) (2026-09-30)
 
 

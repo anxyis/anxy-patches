@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated by release.yml.",
-  "version": "2.10.1",
+  "version": "2.10.2",
   "patches": [
     {
       "name": "App text fix",
@@ -11,7 +11,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -54,7 +54,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -97,7 +97,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -140,7 +140,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -183,7 +183,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -226,7 +226,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -269,7 +269,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -312,7 +312,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -355,7 +355,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -398,7 +398,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -441,7 +441,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -484,7 +484,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -527,7 +527,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -570,7 +570,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -613,7 +613,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
@@ -656,7 +656,7 @@
         {
           "packageName": "com.alightcreative.motion",
           "name": "Alight Motion",
-          "description": null,
+          "description": "Needs the original 5.0.270 APK. Get it on APKMirror: https://www.apkmirror.com/uploads?appcategory=alight-motion-video-and-animation-editor — pick version 5.0.270.1002578.",
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
           "signatures": null,
