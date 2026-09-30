@@ -1,16 +1,16 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated by release.yml.",
-  "version": "2.10.0",
+  "version": "2.10.1",
   "patches": [
     {
-      "name": "Anonymous auth swap",
-      "description": "Repoints Google sign-in branch to anonymous sign-in (5.0.270 AuthMethodPickerActivity).",
+      "name": "App text fix",
+      "description": "Restores app text needed to keep everything working.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -46,14 +46,14 @@
       "options": []
     },
     {
-      "name": "Dev Settings Extra Features",
-      "description": "Adds the Extra Features toggle section to Dev Settings (5.0.270).",
+      "name": "Block background checks",
+      "description": "Stops hidden background verification calls.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -89,14 +89,14 @@
       "options": []
     },
     {
-      "name": "Device capability unlock",
-      "description": "Forces persist/Nr caps getters (2160p, layers, checks pass) on 5.0.270.",
+      "name": "Cleaner home screen",
+      "description": "Hides the tutorial button and promo cards.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -132,14 +132,14 @@
       "options": []
     },
     {
-      "name": "Effects content bundle",
-      "description": "Adds 353 effect XMLs + 292 thumbnails + banner (renders via stock pipeline).",
+      "name": "Easy sign-in",
+      "description": "Sign in without needing a Google account.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -175,14 +175,14 @@
       "options": []
     },
     {
-      "name": "Encoder / effect / settings gates",
-      "description": "Forces isEncoderSupported, readEffect premium flag, and 4 settings fields (5.0.270).",
+      "name": "Extra settings",
+      "description": "Adds extra toggles in Developer Settings.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -218,14 +218,14 @@
       "options": []
     },
     {
-      "name": "Layout declutter",
-      "description": "Hides tutorial button and account promo/ranking cards (5.0.270).",
+      "name": "Full quality export",
+      "description": "Unlocks the highest export resolution and layer limits.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -261,14 +261,14 @@
       "options": []
     },
     {
-      "name": "MainActivity import features",
-      "description": "Ports multi-project zip import (Zjm redirect + onActivityResult handler) on 5.0.270.",
+      "name": "License check off",
+      "description": "Turns off the license check so pro features stay unlocked.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -304,14 +304,14 @@
       "options": []
     },
     {
-      "name": "Membership gates sweep",
-      "description": "Forces the long tail of membership/benefit gates true (5.0.270: 60 sites).",
+      "name": "Multi-project import",
+      "description": "Lets you open multi-project files.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -347,14 +347,14 @@
       "options": []
     },
     {
-      "name": "Misc functional edits",
-      "description": "WIo/VJ early-false, ang/NpA kind-kill, Pk ctor/enum, LF sig-check gut, e4H code, ProxyAuth null, fVp.DaL (5.0.270).",
+      "name": "New effects pack",
+      "description": "Adds 350+ extra effects with previews.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -390,14 +390,14 @@
       "options": []
     },
     {
-      "name": "PairIP StartupLauncher kill",
-      "description": "Neutralizes StartupLauncher.launch() (5.0.270): VM/string-restore bootstrap never runs.",
+      "name": "No forced updates",
+      "description": "Stops the app from forcing you to update.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -433,14 +433,14 @@
       "options": []
     },
     {
-      "name": "PairIP V3 client kill",
-      "description": "Neutralizes LicenseClientV3 entry points (5.0.270 licensecheck3).",
+      "name": "No license popups",
+      "description": "Removes license checks from every screen so no paywall pops up.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -476,14 +476,14 @@
       "options": []
     },
     {
-      "name": "PairIP VMRunner call-site neutralization",
-      "description": "Neutralizes the 20 third-party VMRunner.invoke SDK call sites (5.0.270).",
+      "name": "Premium ON",
+      "description": "Switches premium membership on.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -519,14 +519,14 @@
       "options": []
     },
     {
-      "name": "PairIP license call strip",
-      "description": "Removes LicenseClientV3.onActivityCreate calls from all activities (5.0.270: 70 sites).",
+      "name": "Pro video tools",
+      "description": "Unlocks pro encoder options, effects and settings.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -562,14 +562,14 @@
       "options": []
     },
     {
-      "name": "PairIP manifest bypass",
-      "description": "Restores stock Application class, removes CHECK_LICENSE, bumps versionCode past ForceUpdater (5.0.270).",
+      "name": "Skip startup lock",
+      "description": "Skips the startup block so the app opens straight into pro mode.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -605,14 +605,14 @@
       "options": []
     },
     {
-      "name": "Premium benefit state",
-      "description": "Forces membership benefit gates true (account/Nr.kB + account/Jy6.Ud, 5.0.270).",
+      "name": "Small pro fixes",
+      "description": "Small behind-the-scenes fixes that keep pro working.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",
@@ -648,14 +648,14 @@
       "options": []
     },
     {
-      "name": "R8 string holders restore",
-      "description": "Bakes static string initializers for the 32 VM-populated holder classes (5.0.270: 1463 strings).",
+      "name": "Unlock all pro features",
+      "description": "Unlocks all remaining pro-gated features.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
         {
           "packageName": "com.alightcreative.motion",
-          "name": "Alight Motion Pro",
+          "name": "Alight Motion",
           "description": null,
           "apkFileType": "APK",
           "appIconColor": "#00FFA8",

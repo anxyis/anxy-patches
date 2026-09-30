@@ -1,3 +1,10 @@
+## [2.10.1](https://github.com/anxyis/anxy-patches/compare/v2.10.0...v2.10.1) (2026-09-30)
+
+
+### Bug Fixes
+
+* plain-language patch names, app listed as Alight Motion ([9478f1d](https://github.com/anxyis/anxy-patches/commit/9478f1de5c43bac0034bd4c0422de29d9245e72a))
+
 # [2.10.0](https://github.com/anxyis/anxy-patches/compare/v2.9.0...v2.10.0) (2026-09-30)
 
 
