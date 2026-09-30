@@ -1,3 +1,10 @@
+## [2.11.1](https://github.com/anxyis/anxy-patches/compare/v2.11.0...v2.11.1) (2026-09-30)
+
+
+### Reverts
+
+* Revert "feat: 3D layer rotation playback (X/Y engine + project import)" ([8621ab1](https://github.com/anxyis/anxy-patches/commit/8621ab12cb290b25dcf5b3a1c7a92b5fbb08d5e5))
+
 # [2.11.0](https://github.com/anxyis/anxy-patches/compare/v2.10.3...v2.11.0) (2026-09-30)
 
 
