@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated by release.yml.",
-  "version": "2.10.2",
+  "version": "2.10.3",
   "patches": [
     {
       "name": "App text fix",
@@ -349,7 +349,7 @@
     {
       "name": "New effects pack",
       "description": "Adds 350+ extra effects with previews.",
-      "default": true,
+      "default": false,
       "dependencies": [],
       "compatiblePackages": [
         {

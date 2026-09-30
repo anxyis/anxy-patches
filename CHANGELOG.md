@@ -1,3 +1,10 @@
+## [2.10.3](https://github.com/anxyis/anxy-patches/compare/v2.10.2...v2.10.3) (2026-09-30)
+
+
+### Bug Fixes
+
+* New effects pack off by default ([4fafdb1](https://github.com/anxyis/anxy-patches/commit/4fafdb189cbfc35c9e05fb791c65c9f60b43d1b2))
+
 ## [2.10.2](https://github.com/anxyis/anxy-patches/compare/v2.10.1...v2.10.2) (2026-09-30)
 
 
