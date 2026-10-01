@@ -1,4 +1,4 @@
-# ✦ anxy Morphe Patches
+# ✦ anxy's morphe patches
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/anxyis/anxy-patches/release.yml)
 ![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)
